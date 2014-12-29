@@ -1,0 +1,2566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TranscryptApi" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" />
+      <xsd:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+      <xsd:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" />
+      <xsd:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.Security.Cryptography.X509Certificates" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITranscryptApiNotification_GetNotifications_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotifications" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiNotification_GetNotifications_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiNotification_GetNotifications_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q1:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiNotification_SetViewedNotificationState_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetViewedNotificationState" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiNotification_SetViewedNotificationState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetViewedNotificationStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiNotification_SetViewedNotificationState_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q2:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAddressBook_SendExchangeRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendExchangeRequest" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAddressBook_SendExchangeRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendExchangeRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAddressBook_SendExchangeRequest_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q3:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAddressBook_GetContactList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactList" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAddressBook_GetContactList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAddressBook_GetContactList_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q4:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAddressBook_AcceptExchangeRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:AcceptExchangeRequest" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAddressBook_AcceptExchangeRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AcceptExchangeRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAddressBook_AcceptExchangeRequest_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q5:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAddressBook_RejectExchangeRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:RejectExchangeRequest" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAddressBook_RejectExchangeRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RejectExchangeRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAddressBook_RejectExchangeRequest_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q6:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_LoginToPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginToPassword" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_LoginToPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginToPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_LoginToPassword_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q7:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_GetRandomForLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRandomForLogin" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_GetRandomForLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRandomForLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_GetRandomForLogin_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q8:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_LoginToCert_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginToCert" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_LoginToCert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginToCertResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_LoginToCert_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q9:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_LoginToPasswordWithIntegrator_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginToPasswordWithIntegrator" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_LoginToPasswordWithIntegrator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginToPasswordWithIntegratorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_LoginToPasswordWithIntegrator_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q10:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_LoginToCertWithIntegrator_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginToCertWithIntegrator" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_LoginToCertWithIntegrator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginToCertWithIntegratorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_LoginToCertWithIntegrator_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q11:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_Logout_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q12:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_GetSessionCertificate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSessionCertificate" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_GetSessionCertificate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSessionCertificateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_RegisterByCertificate_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterByCertificate" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_RegisterByCertificate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterByCertificateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_RegisterByCertificateAndKpp_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterByCertificateAndKpp" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiAuth_RegisterByCertificateAndKpp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterByCertificateAndKppResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployee" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_SaveEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmployee" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_SaveEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetCertificates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCertificates" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetCertificates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCertificatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_CheckEmployeeHasCertificates_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckEmployeeHasCertificates" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_CheckEmployeeHasCertificates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckEmployeeHasCertificatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_ChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_ChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_CheckPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPassword" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_CheckPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetUserLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserLogin" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetUserLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetAllOrganizations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrganizations" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetAllOrganizations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrganizationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetAllOrganizations_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q13:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_SetActiveOrganization_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetActiveOrganization" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_SetActiveOrganization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetActiveOrganizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_SetActiveOrganization_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q14:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetMyOrganization_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyOrganization" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetMyOrganization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyOrganizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetMyOrganization_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q15:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_SaveMyOrganization_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMyOrganization" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_SaveMyOrganization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMyOrganizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_SaveMyOrganization_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q16:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetAlterOrganizationRequestPrintForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlterOrganizationRequestPrintForm" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetAlterOrganizationRequestPrintForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlterOrganizationRequestPrintFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetAlterOrganizationRequests_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlterOrganizationRequests" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetAlterOrganizationRequests_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlterOrganizationRequestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetOrganiztionCertificates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganiztionCertificates" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetOrganiztionCertificates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganiztionCertificatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetOrganiztionCertificates_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q17:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetOrganization_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganization" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetOrganization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetOrganization_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q18:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_FindOrganizationsToAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindOrganizationsToAdd" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_FindOrganizationsToAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindOrganizationsToAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_FindOrganizationsToAdd_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q19:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GenerateAlterOrganizationRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateAlterOrganizationRequest" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GenerateAlterOrganizationRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateAlterOrganizationRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetAlterOrganizationRequestPreviewPrintForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlterOrganizationRequestPreviewPrintForm" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetAlterOrganizationRequestPreviewPrintForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlterOrganizationRequestPreviewPrintFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetOrganizationEmployees_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganizationEmployees" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetOrganizationEmployees_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganizationEmployeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetOrganizationEmployees_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q20:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetOrganizationEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganizationEmployee" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetOrganizationEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganizationEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetOrganizationEmployee_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q21:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_SaveOrganizationEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOrganizationEmployee" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_SaveOrganizationEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOrganizationEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_SaveOrganizationEmployee_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q22:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_DeleteOrganizationEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOrganizationEmployee" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_DeleteOrganizationEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOrganizationEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_DeleteOrganizationEmployee_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q23:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_CreateOrganizationEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrganizationEmployee" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_CreateOrganizationEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrganizationEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_CreateOrganizationEmployee_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q24:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetOrganizationDepartments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganizationDepartments" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetOrganizationDepartments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganizationDepartmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetOrganizationDepartments_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q25:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetOrganizationDepartment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganizationDepartment" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetOrganizationDepartment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganizationDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_GetOrganizationDepartment_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q26:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_SaveOrganizationDepartment_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOrganizationDepartment" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_SaveOrganizationDepartment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOrganizationDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_SaveOrganizationDepartment_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q27:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_CreateOrganizationDepartment_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrganizationDepartment" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_CreateOrganizationDepartment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrganizationDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_CreateOrganizationDepartment_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q28:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_DeleteOrganizationDepartment_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOrganizationDepartment" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_DeleteOrganizationDepartment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOrganizationDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_DeleteOrganizationDepartment_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q29:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_SendDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendDocuments" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_SendDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_SendDocuments_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q30:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetDocumentsGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentsGroups" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetDocumentsGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentsGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetDocumentsGroups_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q31:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocument" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetDocument_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q32:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetTransactions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactions" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetTransactions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetTransactions_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q33:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GenerateReceptionNotice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateReceptionNotice" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GenerateReceptionNotice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateReceptionNoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GenerateReceptionNotice_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q34:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_SendResponse_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_SendResponse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_SendResponse_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q35:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetAllowNotice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllowNotice" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetAllowNotice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllowNoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetAllowNotice_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q36:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetTransactionName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionName" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetTransactionName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetTransactionName_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q37:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GenerateCorrectionNotice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateCorrectionNotice" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GenerateCorrectionNotice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateCorrectionNoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GenerateCorrectionNotice_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q38:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GenerateAcceptanceNotice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateAcceptanceNotice" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GenerateAcceptanceNotice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateAcceptanceNoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GenerateAcceptanceNotice_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q39:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_CanCreateReceiveResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:CanCreateReceiveResult" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_CanCreateReceiveResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CanCreateReceiveResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_CanCreateReceiveResult_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q40:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetContent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContent" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetContent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetContent_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q41:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetPrimaryFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrimaryFile" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetPrimaryFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrimaryFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetPrimaryFile_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q42:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetRejectReason_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRejectReason" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetRejectReason_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRejectReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetRejectReason_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q43:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_PrepareForSend_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrepareForSend" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_PrepareForSend_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrepareForSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_PrepareForSend_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q44:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetDocumentsIdForResponce_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentsIdForResponce" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetDocumentsIdForResponce_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentsIdForResponceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_CheckChangesInDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckChangesInDocuments" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_CheckChangesInDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckChangesInDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetPrimaryFileListForInvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrimaryFileListForInvoice" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetPrimaryFileListForInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrimaryFileListForInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetPrimaryDocumentInfoList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrimaryDocumentInfoList" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetPrimaryDocumentInfoList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrimaryDocumentInfoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetCorrectionInfoList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCorrectionInfoList" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetCorrectionInfoList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCorrectionInfoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetRevisionInfoList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRevisionInfoList" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetRevisionInfoList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRevisionInfoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetInvoiceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvoiceInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetInvoiceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvoiceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetInvoiceInfoByContent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvoiceInfoByContent" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetInvoiceInfoByContent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvoiceInfoByContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetDocflowMemberIdRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocflowMemberIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetDocflowMemberIdRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocflowMemberIdRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_ChangeDocumentDepartment_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeDocumentDepartment" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_ChangeDocumentDepartment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeDocumentDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiCertificate_GetSignatureCertificate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSignatureCertificate" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiCertificate_GetSignatureCertificate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSignatureCertificateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiCertificate_GetSignatureCertificate_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q45:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiCertificate_GetCertificateInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCertificateInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiCertificate_GetCertificateInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCertificateInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiCertificate_GetCertificateInfo_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q46:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiDictionary_GetRegionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegionList" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiDictionary_GetRegionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiDictionary_GetRegionList_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q47:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiDictionary_GetCountryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryList" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiDictionary_GetCountryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiDictionary_GetCountryList_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q48:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiDictionary_GetCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountry" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiDictionary_GetCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiDictionary_GetCountry_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q49:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiDictionary_GetRegion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegion" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiDictionary_GetRegion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiDictionary_GetRegion_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q50:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiPrivate_GetEmailChangeToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailChangeToken" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiPrivate_GetEmailChangeToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailChangeTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiPrivate_GetEmailChangeToken_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q51:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiPrivate_ChangeEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeEmail" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiPrivate_ChangeEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiPrivate_ChangeEmail_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q52:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiPrivate_ChangeEmailWithPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeEmailWithPassword" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiPrivate_ChangeEmailWithPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeEmailWithPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiPrivate_ChangeEmailWithPassword_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q53:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiPrivate_GetRecoveryPasswordToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecoveryPasswordToken" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiPrivate_GetRecoveryPasswordToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecoveryPasswordTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiPrivate_GetRecoveryPasswordToken_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q54:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiPrivate_ChangeUserPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiPrivate_ChangeUserPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiPrivate_ChangeUserPassword_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q55:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiPrivate_GetChangeUserPasswordConfirmationState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChangeUserPasswordConfirmationState" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiPrivate_GetChangeUserPasswordConfirmationState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChangeUserPasswordConfirmationStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiPrivate_GetChangeUserPasswordConfirmationState_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q56:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptIdService_GetDocflowMemberId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocflowMemberId" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptIdService_GetDocflowMemberId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocflowMemberIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptIdService_GetDocflowMemberId_ArgumentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q57:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:portType name="ITranscryptApiNotification">
+    <wsdl:documentation>&lt;summary&gt;
+            API работы с уведомлениями
+            &lt;/summary&gt;</wsdl:documentation>
+    <wsdl:operation name="GetNotifications">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить все уведомления
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;&lt;/param&gt;
+            &lt;param name="filter"&gt;&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiNotification/GetNotifications" message="tns:ITranscryptApiNotification_GetNotifications_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiNotification/GetNotificationsResponse" message="tns:ITranscryptApiNotification_GetNotifications_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiNotification/GetNotificationsArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiNotification_GetNotifications_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetViewedNotificationState">
+      <wsdl:documentation>&lt;summary&gt;
+            Установить уведомлению статус просмотренный
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;&lt;/param&gt;
+            &lt;param name="notificationId"&gt;&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiNotification/SetViewedNotificationState" message="tns:ITranscryptApiNotification_SetViewedNotificationState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiNotification/SetViewedNotificationStateResponse" message="tns:ITranscryptApiNotification_SetViewedNotificationState_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiNotification/SetViewedNotificationStateArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiNotification_SetViewedNotificationState_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ITranscryptApiAddressBook">
+    <wsdl:documentation>&lt;summary&gt;
+            API работы с адресной книгой, посылкой и обработкой запросов на добавление контрагентов
+            &lt;/summary&gt;</wsdl:documentation>
+    <wsdl:operation name="SendExchangeRequest">
+      <wsdl:documentation>&lt;summary&gt;
+            Отправить запрос на обмен документами
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Авторизационный токен&lt;/param&gt;
+            &lt;param name="requestReceiverId"&gt;Идентификатор участника документооборота - получателя запроса&lt;/param&gt;
+            &lt;param name="description"&gt;Комментарий к запросу&lt;/param&gt;
+            &lt;returns&gt;Состояние отправленного запроса&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiAddressBook/SendExchangeRequest" message="tns:ITranscryptApiAddressBook_SendExchangeRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiAddressBook/SendExchangeRequestResponse" message="tns:ITranscryptApiAddressBook_SendExchangeRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiAddressBook/SendExchangeRequestArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiAddressBook_SendExchangeRequest_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContactList">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить список контактов текущей организации
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Авторизационный токен&lt;/param&gt;
+            &lt;param name="filter"&gt;Фильтр контакта&lt;/param&gt;
+            &lt;returns&gt;Список контактов&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiAddressBook/GetContactList" message="tns:ITranscryptApiAddressBook_GetContactList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiAddressBook/GetContactListResponse" message="tns:ITranscryptApiAddressBook_GetContactList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiAddressBook/GetContactListArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiAddressBook_GetContactList_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AcceptExchangeRequest">
+      <wsdl:documentation>&lt;summary&gt;
+            Принять запрос на обмен документами
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Авторизационный токен&lt;/param&gt;
+            &lt;param name="contactId"&gt;Идентификатор участника документооборота, отправившего запрос&lt;/param&gt;
+            &lt;returns&gt;Новый статус контакта&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiAddressBook/AcceptExchangeRequest" message="tns:ITranscryptApiAddressBook_AcceptExchangeRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiAddressBook/AcceptExchangeRequestResponse" message="tns:ITranscryptApiAddressBook_AcceptExchangeRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiAddressBook/AcceptExchangeRequestArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiAddressBook_AcceptExchangeRequest_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RejectExchangeRequest">
+      <wsdl:documentation>&lt;summary&gt;
+            Отвергуть/удалить запрос на обмен документами
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Авторизационный токен&lt;/param&gt;
+            &lt;param name="contactId"&gt;Идентификатор участника документооборота, с которым установлена связь&lt;/param&gt;
+            &lt;returns&gt;Новый статус контакта&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiAddressBook/RejectExchangeRequest" message="tns:ITranscryptApiAddressBook_RejectExchangeRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiAddressBook/RejectExchangeRequestResponse" message="tns:ITranscryptApiAddressBook_RejectExchangeRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiAddressBook/RejectExchangeRequestArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiAddressBook_RejectExchangeRequest_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ITranscryptApiAuth">
+    <wsdl:documentation>&lt;summary&gt;
+            API авторизации
+            &lt;/summary&gt;</wsdl:documentation>
+    <wsdl:operation name="LoginToPassword">
+      <wsdl:documentation>&lt;summary&gt;
+            Аутентификация по паре логин/пароль
+            &lt;/summary&gt;
+            &lt;param name="login"&gt;Имя пользователя&lt;/param&gt;
+            &lt;param name="password"&gt;Пароль&lt;/param&gt;
+            &lt;returns&gt;Авторизационный токен&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiAuth/LoginToPassword" message="tns:ITranscryptApiAuth_LoginToPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiAuth/LoginToPasswordResponse" message="tns:ITranscryptApiAuth_LoginToPassword_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiAuth/LoginToPasswordArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiAuth_LoginToPassword_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRandomForLogin">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить уникальную строку для подписи - для аутентификации по сертификату либо для аутентификации по 
+            сертификату
+            &lt;/summary&gt;
+            &lt;returns&gt;Уникальная строка для подписи&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiAuth/GetRandomForLogin" message="tns:ITranscryptApiAuth_GetRandomForLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiAuth/GetRandomForLoginResponse" message="tns:ITranscryptApiAuth_GetRandomForLogin_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiAuth/GetRandomForLoginArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiAuth_GetRandomForLogin_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginToCert">
+      <wsdl:documentation>&lt;summary&gt;
+            Аутентификация по сертификату
+            &lt;/summary&gt;
+            &lt;param name="signedRandom"&gt;Подписанная уникальная строка&lt;/param&gt;
+            &lt;returns&gt;Авторизационный токен&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiAuth/LoginToCert" message="tns:ITranscryptApiAuth_LoginToCert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiAuth/LoginToCertResponse" message="tns:ITranscryptApiAuth_LoginToCert_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiAuth/LoginToCertArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiAuth_LoginToCert_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginToPasswordWithIntegrator">
+      <wsdl:documentation>&lt;summary&gt;
+            Аутентификация по паре логин/пароль с информацией об интеграторе
+            &lt;/summary&gt;
+            &lt;param name="login"&gt;Имя пользователя&lt;/param&gt;
+            &lt;param name="password"&gt;Пароль&lt;/param&gt;
+            &lt;param name="signedByIntegrator"&gt;Подписанная интегратором уникальная строка&lt;/param&gt;
+            &lt;returns&gt;Авторизационный токен&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiAuth/LoginToPasswordWithIntegrator" message="tns:ITranscryptApiAuth_LoginToPasswordWithIntegrator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiAuth/LoginToPasswordWithIntegratorResponse" message="tns:ITranscryptApiAuth_LoginToPasswordWithIntegrator_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiAuth/LoginToPasswordWithIntegratorArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiAuth_LoginToPasswordWithIntegrator_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginToCertWithIntegrator">
+      <wsdl:documentation>&lt;summary&gt;
+            Аутентификация по сертификату с информацией об интеграторе
+            &lt;/summary&gt;
+            &lt;param name="signedByUser"&gt;Подписанная пользователем секретная строка&lt;/param&gt;
+            &lt;param name="signedByIntegrator"&gt;Подписанная интегратором секретная строка&lt;/param&gt;
+            &lt;returns&gt;Авторизационный токен&lt;/returns&gt;
+            &lt;exception cref="T:System.ServiceModel.FaultException`1"&gt;&lt;/exception&gt;
+            &lt;exception cref="T:System.ServiceModel.FaultException`1"&gt;&lt;/exception&gt;
+            &lt;exception cref="T:System.ServiceModel.FaultException`1"&gt;&lt;/exception&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiAuth/LoginToCertWithIntegrator" message="tns:ITranscryptApiAuth_LoginToCertWithIntegrator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiAuth/LoginToCertWithIntegratorResponse" message="tns:ITranscryptApiAuth_LoginToCertWithIntegrator_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiAuth/LoginToCertWithIntegratorArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiAuth_LoginToCertWithIntegrator_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:documentation>&lt;summary&gt;
+            Завершение сессии
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Авторизационный токен&lt;/param&gt;
+            &lt;returns&gt;Результат операции&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiAuth/Logout" message="tns:ITranscryptApiAuth_Logout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiAuth/LogoutResponse" message="tns:ITranscryptApiAuth_Logout_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiAuth/LogoutArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiAuth_Logout_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionCertificate">
+      <wsdl:documentation>&lt;summary&gt;
+            Получение сертификата по которому был авторизован пользователь
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;returns&gt;Список сертификатов&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiAuth/GetSessionCertificate" message="tns:ITranscryptApiAuth_GetSessionCertificate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiAuth/GetSessionCertificateResponse" message="tns:ITranscryptApiAuth_GetSessionCertificate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterByCertificate">
+      <wsdl:documentation>&lt;summary&gt;
+            Регистрация пользователей на основании квалифицированного сертфиката
+            &lt;/summary&gt;
+            &lt;param name="signedSecret"&gt;Подписанный секркет со включенным сертификатом&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiAuth/RegisterByCertificate" message="tns:ITranscryptApiAuth_RegisterByCertificate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiAuth/RegisterByCertificateResponse" message="tns:ITranscryptApiAuth_RegisterByCertificate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterByCertificateAndKpp">
+      <wsdl:documentation>&lt;summary&gt;
+            Регистрация пользователя на основании квалифицированного сертификата и КПП организации.
+            Если не удается обнаружить организацию с ИНН из сертификата и указанным КПП - метод возвращает ошибку.
+            &lt;/summary&gt;
+            &lt;param name="sign"&gt;Подписанный секрет с включенным сертификатом&lt;/param&gt;
+            &lt;param name="kpp"&gt;КПП организации&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiAuth/RegisterByCertificateAndKpp" message="tns:ITranscryptApiAuth_RegisterByCertificateAndKpp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiAuth/RegisterByCertificateAndKppResponse" message="tns:ITranscryptApiAuth_RegisterByCertificateAndKpp_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ITranscryptApiProfile">
+    <wsdl:documentation>&lt;summary&gt;
+            Интерфейс профиля 
+            &lt;/summary&gt;</wsdl:documentation>
+    <wsdl:operation name="GetEmployee">
+      <wsdl:documentation>&lt;summary&gt;
+            Получение информации о сотруднике
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;returns&gt;Сотрудник&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/GetEmployee" message="tns:ITranscryptApiProfile_GetEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/GetEmployeeResponse" message="tns:ITranscryptApiProfile_GetEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmployee">
+      <wsdl:documentation>&lt;summary&gt;
+            Сохранение информации о сотруднике. Часть полей доступна для сохранение только с правами администора организации.
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="employee"&gt;Сотрудник&lt;/param&gt;
+            &lt;returns&gt;Результат операции&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/SaveEmployee" message="tns:ITranscryptApiProfile_SaveEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/SaveEmployeeResponse" message="tns:ITranscryptApiProfile_SaveEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCertificates">
+      <wsdl:documentation>&lt;summary&gt;
+            Получение списка сертификатов сотрудника
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="activeOnly"&gt;Признак - только активные сертификаты&lt;/param&gt;
+            &lt;returns&gt;Список сертификатов&lt;/returns&gt;
+            &lt;exception cref="T:System.ServiceModel.FaultException`1"&gt;
+            Ошибка авторизационного токена
+            &lt;/exception&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/GetCertificates" message="tns:ITranscryptApiProfile_GetCertificates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/GetCertificatesResponse" message="tns:ITranscryptApiProfile_GetCertificates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckEmployeeHasCertificates">
+      <wsdl:documentation>&lt;summary&gt;
+            Првоерка наличия у сотрудника сертификатов
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;
+            Метод нужен, чтобы попросту не гонять сертификаты</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/CheckEmployeeHasCertificates" message="tns:ITranscryptApiProfile_CheckEmployeeHasCertificates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/CheckEmployeeHasCertificatesResponse" message="tns:ITranscryptApiProfile_CheckEmployeeHasCertificates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:documentation>&lt;summary&gt;
+            Сменить пароль
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="oldPassword"&gt;Старый пароль&lt;/param&gt;
+            &lt;param name="newPassword"&gt;Новый пароль&lt;/param&gt;
+            &lt;returns&gt;Результат операции&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/ChangePassword" message="tns:ITranscryptApiProfile_ChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/ChangePasswordResponse" message="tns:ITranscryptApiProfile_ChangePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPassword">
+      <wsdl:documentation>&lt;summary&gt;
+            Проверка пароля
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="password"&gt;Пароль&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/CheckPassword" message="tns:ITranscryptApiProfile_CheckPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/CheckPasswordResponse" message="tns:ITranscryptApiProfile_CheckPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserLogin">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить логин пользователя
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="userId"&gt;Идентификатор пользователя&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/GetUserLogin" message="tns:ITranscryptApiProfile_GetUserLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/GetUserLoginResponse" message="tns:ITranscryptApiProfile_GetUserLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrganizations">
+      <wsdl:documentation>&lt;summary&gt;
+            Получение списка организаций пользователя.
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;returns&gt;Список организаций&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetAllOrganizations" message="tns:ITranscryptApiProfile_GetAllOrganizations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetAllOrganizationsResponse" message="tns:ITranscryptApiProfile_GetAllOrganizations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetAllOrganizationsArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiProfile_GetAllOrganizations_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetActiveOrganization">
+      <wsdl:documentation>&lt;summary&gt;
+            Выбор активной организации пользователя. Ипользуется для пользователей авторизовавшихся по логину и паролю.
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="docflowMemberId"&gt;Идентификатор участника документооборота - организации&lt;/param&gt;
+            &lt;returns&gt;
+            &lt;code&gt;true&lt;/code&gt; - удалось изменить активную организацию
+            &lt;code&gt;false&lt;/code&gt; - не удалось изменить активную организацию
+            &lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/SetActiveOrganization" message="tns:ITranscryptApiProfile_SetActiveOrganization_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/SetActiveOrganizationResponse" message="tns:ITranscryptApiProfile_SetActiveOrganization_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/SetActiveOrganizationArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiProfile_SetActiveOrganization_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyOrganization">
+      <wsdl:documentation>&lt;summary&gt;
+            Получение реквизитов организации
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;returns&gt;
+            Расширенная сущность организации 
+            &lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetMyOrganization" message="tns:ITranscryptApiProfile_GetMyOrganization_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetMyOrganizationResponse" message="tns:ITranscryptApiProfile_GetMyOrganization_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetMyOrganizationArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiProfile_GetMyOrganization_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMyOrganization">
+      <wsdl:documentation>&lt;summary&gt;
+            Сохранение изменений реквизитов организации с использованием запроса
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="signedAlterOrganizationRequest"&gt;Подписанный запрос изменения реквизитов&lt;/param&gt;
+            &lt;returns&gt;Результат операции&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/SaveMyOrganization" message="tns:ITranscryptApiProfile_SaveMyOrganization_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/SaveMyOrganizationResponse" message="tns:ITranscryptApiProfile_SaveMyOrganization_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/SaveMyOrganizationArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiProfile_SaveMyOrganization_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlterOrganizationRequestPrintForm">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить печатную форму по идентификатору запроса
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="signedAlterOrganizationRequestId"&gt;&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetAlterOrganizationRequestPrintForm" message="tns:ITranscryptApiProfile_GetAlterOrganizationRequestPrintForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetAlterOrganizationRequestPrintFormResponse" message="tns:ITranscryptApiProfile_GetAlterOrganizationRequestPrintForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlterOrganizationRequests">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить список запросов на зменение данных
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetAlterOrganizationRequests" message="tns:ITranscryptApiProfile_GetAlterOrganizationRequests_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetAlterOrganizationRequestsResponse" message="tns:ITranscryptApiProfile_GetAlterOrganizationRequests_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganiztionCertificates">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить список сертификатов организации
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="organizationId"&gt;Идентификатор организации&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetOrganiztionCertificates" message="tns:ITranscryptApiProfile_GetOrganiztionCertificates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetOrganiztionCertificatesResponse" message="tns:ITranscryptApiProfile_GetOrganiztionCertificates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetOrganiztionCertificatesArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiProfile_GetOrganiztionCertificates_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganization">
+      <wsdl:documentation>&lt;summary&gt;
+            Получение организации по ID.
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="docflowMemberId"&gt;Идентификатор участника документооборота - организации&lt;/param&gt;
+            &lt;returns&gt;Организация&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetOrganization" message="tns:ITranscryptApiProfile_GetOrganization_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetOrganizationResponse" message="tns:ITranscryptApiProfile_GetOrganization_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetOrganizationArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiProfile_GetOrganization_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindOrganizationsToAdd">
+      <wsdl:documentation>&lt;summary&gt;
+            Получение списка организаций по введенной строке поиска.
+            Не возвращает свою организацию и те которые находятся в активных адресной книги
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="searchStr"&gt;Строка для поиска&lt;/param&gt;
+            &lt;returns&gt;Список организаций с подходящим именем, идентификатором или ИНН&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/FindOrganizationsToAdd" message="tns:ITranscryptApiProfile_FindOrganizationsToAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/FindOrganizationsToAddResponse" message="tns:ITranscryptApiProfile_FindOrganizationsToAdd_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/FindOrganizationsToAddArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiProfile_FindOrganizationsToAdd_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateAlterOrganizationRequest">
+      <wsdl:documentation>&lt;summary&gt;
+            Создание запроса на изменение реквизитов организации
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="newDetails"&gt;Новые реквизиты&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GenerateAlterOrganizationRequest" message="tns:ITranscryptApiProfile_GenerateAlterOrganizationRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GenerateAlterOrganizationRequestResponse" message="tns:ITranscryptApiProfile_GenerateAlterOrganizationRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlterOrganizationRequestPreviewPrintForm">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить печатную форму для предварительного просмотра заявления на изменение данных
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;&lt;/param&gt;
+            &lt;param name="newDetails"&gt;Оргпнизация&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetAlterOrganizationRequestPreviewPrintForm" message="tns:ITranscryptApiProfile_GetAlterOrganizationRequestPreviewPrintForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetAlterOrganizationRequestPreviewPrintFormResponse" message="tns:ITranscryptApiProfile_GetAlterOrganizationRequestPreviewPrintForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganizationEmployees">
+      <wsdl:documentation>&lt;summary&gt;
+            Получение списка сотрудников организации
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;returns&gt;Список сотрудников организации&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/GetOrganizationEmployees" message="tns:ITranscryptApiProfile_GetOrganizationEmployees_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/GetOrganizationEmployeesResponse" message="tns:ITranscryptApiProfile_GetOrganizationEmployees_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/GetOrganizationEmployeesArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiProfile_GetOrganizationEmployees_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganizationEmployee">
+      <wsdl:documentation>&lt;summary&gt;
+            Получение информации о сотруднике организации
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="employeeId"&gt;Идентификатор сотрудника&lt;/param&gt;
+            &lt;returns&gt;Сотрудник&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/GetOrganizationEmployee" message="tns:ITranscryptApiProfile_GetOrganizationEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/GetOrganizationEmployeeResponse" message="tns:ITranscryptApiProfile_GetOrganizationEmployee_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/GetOrganizationEmployeeArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiProfile_GetOrganizationEmployee_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrganizationEmployee">
+      <wsdl:documentation>&lt;summary&gt;
+            Сохранение информации о сотруднике организации
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="employee"&gt;Сотрудник&lt;/param&gt;
+            &lt;returns&gt;Результат операции&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/SaveOrganizationEmployee" message="tns:ITranscryptApiProfile_SaveOrganizationEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/SaveOrganizationEmployeeResponse" message="tns:ITranscryptApiProfile_SaveOrganizationEmployee_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/SaveOrganizationEmployeeArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiProfile_SaveOrganizationEmployee_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrganizationEmployee">
+      <wsdl:documentation>&lt;summary&gt;
+            Удаление сотрудника
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="employeeId"&gt;Идентификатор сотрудника&lt;/param&gt;
+            &lt;returns&gt;Результат операции&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/DeleteOrganizationEmployee" message="tns:ITranscryptApiProfile_DeleteOrganizationEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/DeleteOrganizationEmployeeResponse" message="tns:ITranscryptApiProfile_DeleteOrganizationEmployee_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/DeleteOrganizationEmployeeArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiProfile_DeleteOrganizationEmployee_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrganizationEmployee">
+      <wsdl:documentation>&lt;summary&gt;
+            Создание нового сотрудника организации
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="employee"&gt;Сотрудник&lt;/param&gt;
+            &lt;returns&gt;Идентификатор созданного сотрудника организации&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/CreateOrganizationEmployee" message="tns:ITranscryptApiProfile_CreateOrganizationEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/CreateOrganizationEmployeeResponse" message="tns:ITranscryptApiProfile_CreateOrganizationEmployee_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/CreateOrganizationEmployeeArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiProfile_CreateOrganizationEmployee_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganizationDepartments">
+      <wsdl:documentation>&lt;summary&gt;
+            Получение списка подразделений организации
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;returns&gt;Список подразделений организации&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/GetOrganizationDepartments" message="tns:ITranscryptApiProfile_GetOrganizationDepartments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/GetOrganizationDepartmentsResponse" message="tns:ITranscryptApiProfile_GetOrganizationDepartments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/GetOrganizationDepartmentsArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiProfile_GetOrganizationDepartments_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganizationDepartment">
+      <wsdl:documentation>&lt;summary&gt;
+            Получение информации о подразделении организации
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="departmentId"&gt;Идентификатор подразделения организации&lt;/param&gt;
+            &lt;returns&gt;Подразделение организации&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/GetOrganizationDepartment" message="tns:ITranscryptApiProfile_GetOrganizationDepartment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/GetOrganizationDepartmentResponse" message="tns:ITranscryptApiProfile_GetOrganizationDepartment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/GetOrganizationDepartmentArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiProfile_GetOrganizationDepartment_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrganizationDepartment">
+      <wsdl:documentation>&lt;summary&gt;
+            Сохранение информации о подразделении организации
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="department"&gt;Подразделение организации&lt;/param&gt;
+            &lt;returns&gt;Результат операции&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/SaveOrganizationDepartment" message="tns:ITranscryptApiProfile_SaveOrganizationDepartment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/SaveOrganizationDepartmentResponse" message="tns:ITranscryptApiProfile_SaveOrganizationDepartment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/SaveOrganizationDepartmentArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiProfile_SaveOrganizationDepartment_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrganizationDepartment">
+      <wsdl:documentation>&lt;summary&gt;
+            Создание подразделения организации
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="department"&gt;Подразделение организации&lt;/param&gt;
+            &lt;returns&gt;Идентификатор созданного депатамента&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/CreateOrganizationDepartment" message="tns:ITranscryptApiProfile_CreateOrganizationDepartment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/CreateOrganizationDepartmentResponse" message="tns:ITranscryptApiProfile_CreateOrganizationDepartment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/CreateOrganizationDepartmentArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiProfile_CreateOrganizationDepartment_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrganizationDepartment">
+      <wsdl:documentation>&lt;summary&gt;
+            Удаление подразделения организации
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="departmentId"&gt;Идентификатор подразделения организации&lt;/param&gt;
+            &lt;returns&gt;Результат операции&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/DeleteOrganizationDepartment" message="tns:ITranscryptApiProfile_DeleteOrganizationDepartment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/DeleteOrganizationDepartmentResponse" message="tns:ITranscryptApiProfile_DeleteOrganizationDepartment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiProfileAdmin/DeleteOrganizationDepartmentArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiProfile_DeleteOrganizationDepartment_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ITranscryptApiTransport">
+    <wsdl:documentation>&lt;summary&gt;
+            Интерфейс для отправки/получения сообщений
+            &lt;/summary&gt;</wsdl:documentation>
+    <wsdl:operation name="SendDocuments">
+      <wsdl:documentation>&lt;summary&gt;
+            Отправить группу документов
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="documents"&gt;Список документов для отправки одной группой&lt;/param&gt;
+            &lt;param name="receiverId"&gt;Идентификатор участника документооборота получателя&lt;/param&gt;
+            &lt;returns&gt;Идентификатор сформированной группы документов&lt;/returns&gt;
+            &lt;exception cref="T:System.ServiceModel.FaultException`1"&gt;
+            Ошибка в переданных аргументах
+            &lt;/exception&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/SendDocuments" message="tns:ITranscryptApiTransport_SendDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/SendDocumentsResponse" message="tns:ITranscryptApiTransport_SendDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiTransport/SendDocumentsArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiTransport_SendDocuments_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentsGroups">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить список групп документов
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="filter"&gt;Фильтр документов&lt;/param&gt;
+            &lt;returns&gt;Список групп документов&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDocumentsGroups" message="tns:ITranscryptApiTransport_GetDocumentsGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDocumentsGroupsResponse" message="tns:ITranscryptApiTransport_GetDocumentsGroups_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDocumentsGroupsArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiTransport_GetDocumentsGroups_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocument">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить документ
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="documentId"&gt;Идентификатор документа&lt;/param&gt;
+            &lt;returns&gt;Документ&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDocument" message="tns:ITranscryptApiTransport_GetDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDocumentResponse" message="tns:ITranscryptApiTransport_GetDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDocumentArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiTransport_GetDocument_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить транзакции документа
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="documentId"&gt;Идентификатор документа&lt;/param&gt;
+            &lt;returns&gt;Транзакции&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetTransactions" message="tns:ITranscryptApiTransport_GetTransactions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetTransactionsResponse" message="tns:ITranscryptApiTransport_GetTransactions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetTransactionsArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiTransport_GetTransactions_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateReceptionNotice">
+      <wsdl:documentation>&lt;summary&gt;
+            Создать извещение о получении документа
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="documentId"&gt;Идентификатор полученного документа&lt;/param&gt;
+            &lt;param name="transactionType"&gt;Код транзакции которую необходимо сформировать&lt;/param&gt;
+            &lt;returns&gt;Извещение о получении, готовое к подписи&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GenerateReceptionNotice" message="tns:ITranscryptApiTransport_GenerateReceptionNotice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GenerateReceptionNoticeResponse" message="tns:ITranscryptApiTransport_GenerateReceptionNotice_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GenerateReceptionNoticeArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiTransport_GenerateReceptionNotice_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendResponse">
+      <wsdl:documentation>&lt;summary&gt;
+            Отправить ответное сообщение
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Авторизационный токен&lt;/param&gt;
+            &lt;param name="response"&gt;Ответное сообщение&lt;/param&gt;
+            &lt;param name="documentId"&gt;Идентификатор документа на который отправляется ответ&lt;/param&gt;
+            &lt;returns&gt;Идентификатор сформированной транзакции&lt;/returns&gt;
+            &lt;exception cref="T:System.ServiceModel.FaultException`1"&gt;
+            Ошибка в переданных аргументах
+            &lt;/exception&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/SendResponse" message="tns:ITranscryptApiTransport_SendResponse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/SendResponseResponse" message="tns:ITranscryptApiTransport_SendResponse_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiTransport/SendResponseArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiTransport_SendResponse_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllowNotice">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить список уведомлений которые нужно выполнить
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Авторизационный токен&lt;/param&gt;
+            &lt;param name="documentId"&gt;Идентификатор документа&lt;/param&gt;
+            &lt;returns&gt;Коды транзакций&lt;/returns&gt;
+            &lt;exception cref="T:System.ServiceModel.FaultException`1"&gt;
+            Ошибка в переданных аргументах
+            &lt;/exception&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetAllowNotice" message="tns:ITranscryptApiTransport_GetAllowNotice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetAllowNoticeResponse" message="tns:ITranscryptApiTransport_GetAllowNotice_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetAllowNoticeArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiTransport_GetAllowNotice_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionName">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить название транзакции по коду
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Авторизационный токен&lt;/param&gt;
+            &lt;param name="transactionCode"&gt;Код транзакции&lt;/param&gt;
+            &lt;returns&gt;Сертификат&lt;/returns&gt;
+            &lt;exception cref="T:System.ServiceModel.FaultException`1"&gt;
+            Ошибка в переданных аргументах
+            &lt;/exception&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetTransactionName" message="tns:ITranscryptApiTransport_GetTransactionName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetTransactionNameResponse" message="tns:ITranscryptApiTransport_GetTransactionName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetTransactionNameArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiTransport_GetTransactionName_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCorrectionNotice">
+      <wsdl:documentation>&lt;summary&gt;
+            Создать уведомление об уточнении
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="documentId"&gt;Идентификатор полученного документа&lt;/param&gt;
+            &lt;param name="description"&gt;Комментарий к уточнению&lt;/param&gt;
+            &lt;returns&gt;Уведомление об уточнении, готовое к подписи&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GenerateCorrectionNotice" message="tns:ITranscryptApiTransport_GenerateCorrectionNotice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GenerateCorrectionNoticeResponse" message="tns:ITranscryptApiTransport_GenerateCorrectionNotice_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GenerateCorrectionNoticeArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiTransport_GenerateCorrectionNotice_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateAcceptanceNotice">
+      <wsdl:documentation>&lt;summary&gt;
+            Создать уведомление о подписи получателем
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="documentId"&gt;Идентификатор полученного документа&lt;/param&gt;
+            &lt;returns&gt;Уведомление о подписи получателем&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GenerateAcceptanceNotice" message="tns:ITranscryptApiTransport_GenerateAcceptanceNotice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GenerateAcceptanceNoticeResponse" message="tns:ITranscryptApiTransport_GenerateAcceptanceNotice_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GenerateAcceptanceNoticeArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiTransport_GenerateAcceptanceNotice_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CanCreateReceiveResult">
+      <wsdl:documentation>&lt;summary&gt;
+            Проверка возможности создания результата приема
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="documentId"&gt;Идентификатор документа&lt;/param&gt;
+            &lt;returns&gt;true-можно сформировать транзакцию "результат приема", false-иначе&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/CanCreateReceiveResult" message="tns:ITranscryptApiTransport_CanCreateReceiveResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/CanCreateReceiveResultResponse" message="tns:ITranscryptApiTransport_CanCreateReceiveResult_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiTransport/CanCreateReceiveResultArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiTransport_CanCreateReceiveResult_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContent">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить контент файла
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="fileId"&gt;Идентификатор файла&lt;/param&gt;
+            &lt;returns&gt;Контент документа&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetContent" message="tns:ITranscryptApiTransport_GetContent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetContentResponse" message="tns:ITranscryptApiTransport_GetContent_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetContentArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiTransport_GetContent_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrimaryFile">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить первичный документ
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="documentId"&gt;Идентификатор документа&lt;/param&gt;
+            &lt;returns&gt;Первичный документ&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetPrimaryFile" message="tns:ITranscryptApiTransport_GetPrimaryFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetPrimaryFileResponse" message="tns:ITranscryptApiTransport_GetPrimaryFile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetPrimaryFileArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiTransport_GetPrimaryFile_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRejectReason">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить причину отказа в подписи
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="documentId"&gt;Идентификатор документа&lt;/param&gt;
+            &lt;returns&gt;Комментарий к отказу в подписи&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetRejectReason" message="tns:ITranscryptApiTransport_GetRejectReason_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetRejectReasonResponse" message="tns:ITranscryptApiTransport_GetRejectReason_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetRejectReasonArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiTransport_GetRejectReason_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareForSend">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить исправленную версию формализованного документа
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="content"&gt;Содержимое документа&lt;/param&gt;
+            &lt;param name="receiverId"&gt;Идентификатор получателя&lt;/param&gt;
+            &lt;param name="fileName"&gt;Новое имя файла&lt;/param&gt;
+            &lt;param name="docflowType"&gt;Тип документооборота&lt;/param&gt;
+            &lt;returns&gt;Комментарий к отказу в подписи&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/PrepareForSend" message="tns:ITranscryptApiTransport_PrepareForSend_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/PrepareForSendResponse" message="tns:ITranscryptApiTransport_PrepareForSend_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiTransport/PrepareForSendArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiTransport_PrepareForSend_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentsIdForResponce">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить список идентификаторов документов для которых необходимо сформировать ответные сообщения
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDocumentsIdForResponce" message="tns:ITranscryptApiTransport_GetDocumentsIdForResponce_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDocumentsIdForResponceResponse" message="tns:ITranscryptApiTransport_GetDocumentsIdForResponce_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckChangesInDocuments">
+      <wsdl:documentation>&lt;summary&gt;
+            Проверка наличия изменений в документах
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="lastUpdateDateTime"&gt;Дата последнего обновления&lt;/param&gt;
+            &lt;param name="filter"&gt;Фильтр&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/CheckChangesInDocuments" message="tns:ITranscryptApiTransport_CheckChangesInDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/CheckChangesInDocumentsResponse" message="tns:ITranscryptApiTransport_CheckChangesInDocuments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrimaryFileListForInvoice">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить список первичных документов для СФ
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="content"&gt;Контент формализованного документа&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetPrimaryFileListForInvoice" message="tns:ITranscryptApiTransport_GetPrimaryFileListForInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetPrimaryFileListForInvoiceResponse" message="tns:ITranscryptApiTransport_GetPrimaryFileListForInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrimaryDocumentInfoList">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить список первичных документов
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="documentId"&gt;Идентификатор документа&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetPrimaryDocumentInfoList" message="tns:ITranscryptApiTransport_GetPrimaryDocumentInfoList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetPrimaryDocumentInfoListResponse" message="tns:ITranscryptApiTransport_GetPrimaryDocumentInfoList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCorrectionInfoList">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить корректировки документа
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="documentId"&gt;Идентификатор документа&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetCorrectionInfoList" message="tns:ITranscryptApiTransport_GetCorrectionInfoList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetCorrectionInfoListResponse" message="tns:ITranscryptApiTransport_GetCorrectionInfoList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRevisionInfoList">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить исправления документа
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="documentId"&gt;Идентификатор документа&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetRevisionInfoList" message="tns:ITranscryptApiTransport_GetRevisionInfoList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetRevisionInfoListResponse" message="tns:ITranscryptApiTransport_GetRevisionInfoList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceInfo">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить дополнительную информацию о документе
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="documentId"&gt;Идентификатор документа&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetInvoiceInfo" message="tns:ITranscryptApiTransport_GetInvoiceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetInvoiceInfoResponse" message="tns:ITranscryptApiTransport_GetInvoiceInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceInfoByContent">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить дополнитульную информацию о СФ по контенту
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="content"&gt;Контент документа&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetInvoiceInfoByContent" message="tns:ITranscryptApiTransport_GetInvoiceInfoByContent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetInvoiceInfoByContentResponse" message="tns:ITranscryptApiTransport_GetInvoiceInfoByContent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocflowMemberIdRequest">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить запрос на получение DocflowMemberId
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="id"&gt;Идентификатор запроса&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDocflowMemberIdRequest" message="tns:ITranscryptApiTransport_GetDocflowMemberIdRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDocflowMemberIdRequestResponse" message="tns:ITranscryptApiTransport_GetDocflowMemberIdRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeDocumentDepartment">
+      <wsdl:documentation>&lt;summary&gt;
+            Изменить подразделение документа
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="documentId"&gt;Идентификатор документа&lt;/param&gt;
+            &lt;param name="departmentId"&gt;Идентификатор подразделения&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/ChangeDocumentDepartment" message="tns:ITranscryptApiTransport_ChangeDocumentDepartment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/ChangeDocumentDepartmentResponse" message="tns:ITranscryptApiTransport_ChangeDocumentDepartment_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ITranscryptApiCertificate">
+    <wsdl:documentation>&lt;summary&gt;
+            Интерфейс для работы с сертификатами
+            &lt;/summary&gt;</wsdl:documentation>
+    <wsdl:operation name="GetSignatureCertificate">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить сертификат
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Авторизационный токен&lt;/param&gt;
+            &lt;param name="signature"&gt;Подпись&lt;/param&gt;
+            &lt;returns&gt;Сертификат&lt;/returns&gt;
+            &lt;exception cref="T:System.ServiceModel.FaultException`1"&gt;
+            Ошибка в переданных аргументах
+            &lt;/exception&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiCertificate/GetSignatureCertificate" message="tns:ITranscryptApiCertificate_GetSignatureCertificate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiCertificate/GetSignatureCertificateResponse" message="tns:ITranscryptApiCertificate_GetSignatureCertificate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiCertificate/GetSignatureCertificateArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiCertificate_GetSignatureCertificate_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCertificateInfo">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить информацию о сертификате
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Авторизационный токен&lt;/param&gt;
+            &lt;param name="thumbprint"&gt;Идентификатор подписи&lt;/param&gt;
+            &lt;returns&gt;Информация о сертификате&lt;/returns&gt;
+            &lt;exception cref="T:System.ServiceModel.FaultException`1"&gt;
+            Ошибка в переданных аргументах
+            &lt;/exception&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiCertificate/GetCertificateInfo" message="tns:ITranscryptApiCertificate_GetCertificateInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiCertificate/GetCertificateInfoResponse" message="tns:ITranscryptApiCertificate_GetCertificateInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiCertificate/GetCertificateInfoArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiCertificate_GetCertificateInfo_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ITranscryptApiDictionary">
+    <wsdl:documentation>&lt;summary&gt;
+            API работы со справочниками
+            &lt;/summary&gt;</wsdl:documentation>
+    <wsdl:operation name="GetRegionList">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить список всех регионов из справочника
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Авторизационный токен&lt;/param&gt;
+            &lt;returns&gt;Регионы&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiDictionary/GetRegionList" message="tns:ITranscryptApiDictionary_GetRegionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiDictionary/GetRegionListResponse" message="tns:ITranscryptApiDictionary_GetRegionList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiDictionary/GetRegionListArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiDictionary_GetRegionList_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryList">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить список всех стран из справочника
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Авторизационный токен&lt;/param&gt;
+            &lt;returns&gt;Страны&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiDictionary/GetCountryList" message="tns:ITranscryptApiDictionary_GetCountryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiDictionary/GetCountryListResponse" message="tns:ITranscryptApiDictionary_GetCountryList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiDictionary/GetCountryListArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiDictionary_GetCountryList_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountry">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить страну по коду
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Авторизационный токен&lt;/param&gt;
+            &lt;param name="code2"&gt;код страны&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiDictionary/GetCountry" message="tns:ITranscryptApiDictionary_GetCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiDictionary/GetCountryResponse" message="tns:ITranscryptApiDictionary_GetCountry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiDictionary/GetCountryArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiDictionary_GetCountry_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить регион по коду
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Авторизационный токен&lt;/param&gt;
+            &lt;param name="code"&gt;код региона&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiDictionary/GetRegion" message="tns:ITranscryptApiDictionary_GetRegion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiDictionary/GetRegionResponse" message="tns:ITranscryptApiDictionary_GetRegion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiDictionary/GetRegionArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiDictionary_GetRegion_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ITranscryptApiPrivate">
+    <wsdl:documentation>&lt;summary&gt;
+            API работы с методами изменения авторизационных данных
+            &lt;/summary&gt;</wsdl:documentation>
+    <wsdl:operation name="GetEmailChangeToken">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить token подверждения 
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Авторизационный токен&lt;/param&gt;
+            &lt;param name="newEmail"&gt;Новый email&lt;/param&gt;
+            &lt;returns&gt;token подверждения&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiPrivate/GetEmailChangeToken" message="tns:ITranscryptApiPrivate_GetEmailChangeToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiPrivate/GetEmailChangeTokenResponse" message="tns:ITranscryptApiPrivate_GetEmailChangeToken_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiPrivate/GetEmailChangeTokenArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiPrivate_GetEmailChangeToken_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeEmail">
+      <wsdl:documentation>&lt;summary&gt;
+            Сменить email сотрудника
+            &lt;/summary&gt;
+            &lt;param name="secret"&gt;&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiPrivate/ChangeEmail" message="tns:ITranscryptApiPrivate_ChangeEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiPrivate/ChangeEmailResponse" message="tns:ITranscryptApiPrivate_ChangeEmail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiPrivate/ChangeEmailArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiPrivate_ChangeEmail_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeEmailWithPassword">
+      <wsdl:documentation>&lt;summary&gt;
+            Сменить email сотрудника, с подверждением принадлежности нового пользователя сотруднику
+            &lt;/summary&gt;
+            &lt;param name="secret"&gt;&lt;/param&gt;
+            &lt;param name="password"&gt;&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiPrivate/ChangeEmailWithPassword" message="tns:ITranscryptApiPrivate_ChangeEmailWithPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiPrivate/ChangeEmailWithPasswordResponse" message="tns:ITranscryptApiPrivate_ChangeEmailWithPassword_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiPrivate/ChangeEmailWithPasswordArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiPrivate_ChangeEmailWithPassword_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecoveryPasswordToken">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить токен для смены пароля
+            &lt;/summary&gt;
+            &lt;param name="email"&gt;Email пользователя которому необхходимо восстановить пароль&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiPrivate/GetRecoveryPasswordToken" message="tns:ITranscryptApiPrivate_GetRecoveryPasswordToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiPrivate/GetRecoveryPasswordTokenResponse" message="tns:ITranscryptApiPrivate_GetRecoveryPasswordToken_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiPrivate/GetRecoveryPasswordTokenArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiPrivate_GetRecoveryPasswordToken_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserPassword">
+      <wsdl:documentation>&lt;summary&gt;
+            Сменить (Восстановить) пароль пользователя
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен восстановления&lt;/param&gt;
+            &lt;param name="newPassword"&gt;Новый пароль&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiPrivate/ChangeUserPassword" message="tns:ITranscryptApiPrivate_ChangeUserPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiPrivate/ChangeUserPasswordResponse" message="tns:ITranscryptApiPrivate_ChangeUserPassword_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiPrivate/ChangeUserPasswordArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiPrivate_ChangeUserPassword_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChangeUserPasswordConfirmationState">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить состояние подтверждения восстановления
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен восстановления&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiPrivate/GetChangeUserPasswordConfirmationState" message="tns:ITranscryptApiPrivate_GetChangeUserPasswordConfirmationState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiPrivate/GetChangeUserPasswordConfirmationStateResponse" message="tns:ITranscryptApiPrivate_GetChangeUserPasswordConfirmationState_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiPrivate/GetChangeUserPasswordConfirmationStateArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiPrivate_GetChangeUserPasswordConfirmationState_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ITranscryptIdService">
+    <wsdl:documentation>&lt;summary&gt;
+            Интерфейс для метода получения идентификатора по ИНН и КПП
+            &lt;/summary&gt;</wsdl:documentation>
+    <wsdl:operation name="GetDocflowMemberId">
+      <wsdl:documentation>&lt;summary&gt;
+            Получение идентификатора по ИНН и КПП
+            &lt;/summary&gt;
+            &lt;param name="inn"&gt;ИНН&lt;/param&gt;
+            &lt;param name="kpp"&gt;КПП&lt;/param&gt;
+            &lt;param name="requesterCode"&gt;Код запрашивающей стороны&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptIdService/GetDocflowMemberId" message="tns:ITranscryptIdService_GetDocflowMemberId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptIdService/GetDocflowMemberIdResponse" message="tns:ITranscryptIdService_GetDocflowMemberId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptIdService/GetDocflowMemberIdArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptIdService_GetDocflowMemberId_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NotificationApi" type="tns:ITranscryptApiNotification">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetNotifications">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiNotification/GetNotifications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetViewedNotificationState">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiNotification/SetViewedNotificationState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AddressBookApi" type="tns:ITranscryptApiAddressBook">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendExchangeRequest">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiAddressBook/SendExchangeRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContactList">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiAddressBook/GetContactList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AcceptExchangeRequest">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiAddressBook/AcceptExchangeRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RejectExchangeRequest">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiAddressBook/RejectExchangeRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AuthenticateApi" type="tns:ITranscryptApiAuth">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoginToPassword">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiAuth/LoginToPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRandomForLogin">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiAuth/GetRandomForLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoginToCert">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiAuth/LoginToCert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoginToPasswordWithIntegrator">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiAuth/LoginToPasswordWithIntegrator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoginToCertWithIntegrator">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiAuth/LoginToCertWithIntegrator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiAuth/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionCertificate">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiAuth/GetSessionCertificate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterByCertificate">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiAuth/RegisterByCertificate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterByCertificateAndKpp">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiAuth/RegisterByCertificateAndKpp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ProfileApi" type="tns:ITranscryptApiProfile">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEmployee">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileEmployee/GetEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmployee">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileEmployee/SaveEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCertificates">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileEmployee/GetCertificates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckEmployeeHasCertificates">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileEmployee/CheckEmployeeHasCertificates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileEmployee/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPassword">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileEmployee/CheckPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserLogin">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileEmployee/GetUserLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrganizations">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileOrganization/GetAllOrganizations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetActiveOrganization">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileOrganization/SetActiveOrganization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyOrganization">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileOrganization/GetMyOrganization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMyOrganization">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileOrganization/SaveMyOrganization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlterOrganizationRequestPrintForm">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileOrganization/GetAlterOrganizationRequestPrintForm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlterOrganizationRequests">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileOrganization/GetAlterOrganizationRequests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganiztionCertificates">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileOrganization/GetOrganiztionCertificates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganization">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileOrganization/GetOrganization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindOrganizationsToAdd">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileOrganization/FindOrganizationsToAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateAlterOrganizationRequest">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileOrganization/GenerateAlterOrganizationRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlterOrganizationRequestPreviewPrintForm">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileOrganization/GetAlterOrganizationRequestPreviewPrintForm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganizationEmployees">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileAdmin/GetOrganizationEmployees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganizationEmployee">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileAdmin/GetOrganizationEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrganizationEmployee">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileAdmin/SaveOrganizationEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrganizationEmployee">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileAdmin/DeleteOrganizationEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrganizationEmployee">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileAdmin/CreateOrganizationEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganizationDepartments">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileAdmin/GetOrganizationDepartments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganizationDepartment">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileAdmin/GetOrganizationDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrganizationDepartment">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileAdmin/SaveOrganizationDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrganizationDepartment">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileAdmin/CreateOrganizationDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrganizationDepartment">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileAdmin/DeleteOrganizationDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TransportApi" type="tns:ITranscryptApiTransport">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendDocuments">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/SendDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentsGroups">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetDocumentsGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocument">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateReceptionNotice">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GenerateReceptionNotice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendResponse">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/SendResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllowNotice">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetAllowNotice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionName">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetTransactionName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCorrectionNotice">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GenerateCorrectionNotice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateAcceptanceNotice">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GenerateAcceptanceNotice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CanCreateReceiveResult">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/CanCreateReceiveResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContent">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrimaryFile">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetPrimaryFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRejectReason">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetRejectReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareForSend">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/PrepareForSend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentsIdForResponce">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetDocumentsIdForResponce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckChangesInDocuments">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/CheckChangesInDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrimaryFileListForInvoice">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetPrimaryFileListForInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrimaryDocumentInfoList">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetPrimaryDocumentInfoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCorrectionInfoList">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetCorrectionInfoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRevisionInfoList">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetRevisionInfoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceInfo">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetInvoiceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceInfoByContent">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetInvoiceInfoByContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocflowMemberIdRequest">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetDocflowMemberIdRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeDocumentDepartment">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/ChangeDocumentDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CertificateApi" type="tns:ITranscryptApiCertificate">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSignatureCertificate">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiCertificate/GetSignatureCertificate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCertificateInfo">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiCertificate/GetCertificateInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DictionaryApi" type="tns:ITranscryptApiDictionary">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRegionList">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiDictionary/GetRegionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryList">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiDictionary/GetCountryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountry">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiDictionary/GetCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiDictionary/GetRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PrivateApi" type="tns:ITranscryptApiPrivate">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEmailChangeToken">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiPrivate/GetEmailChangeToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeEmail">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiPrivate/ChangeEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeEmailWithPassword">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiPrivate/ChangeEmailWithPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecoveryPasswordToken">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiPrivate/GetRecoveryPasswordToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserPassword">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiPrivate/ChangeUserPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetChangeUserPasswordConfirmationState">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiPrivate/GetChangeUserPasswordConfirmationState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TranscryptIdService" type="tns:ITranscryptIdService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDocflowMemberId">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptIdService/GetDocflowMemberId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentFaultFault">
+        <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TranscryptApi">
+    <wsdl:port name="NotificationApi" binding="tns:NotificationApi">
+      <soap:address location="http://demo.tcrypt.ru:8080/TranscryptApi.svc" />
+    </wsdl:port>
+    <wsdl:port name="AddressBookApi" binding="tns:AddressBookApi">
+      <soap:address location="http://demo.tcrypt.ru:8080/TranscryptApi.svc" />
+    </wsdl:port>
+    <wsdl:port name="AuthenticateApi" binding="tns:AuthenticateApi">
+      <soap:address location="http://demo.tcrypt.ru:8080/TranscryptApi.svc" />
+    </wsdl:port>
+    <wsdl:port name="ProfileApi" binding="tns:ProfileApi">
+      <soap:address location="http://demo.tcrypt.ru:8080/TranscryptApi.svc" />
+    </wsdl:port>
+    <wsdl:port name="TransportApi" binding="tns:TransportApi">
+      <soap:address location="http://demo.tcrypt.ru:8080/TranscryptApi.svc" />
+    </wsdl:port>
+    <wsdl:port name="CertificateApi" binding="tns:CertificateApi">
+      <soap:address location="http://demo.tcrypt.ru:8080/TranscryptApi.svc" />
+    </wsdl:port>
+    <wsdl:port name="DictionaryApi" binding="tns:DictionaryApi">
+      <soap:address location="http://demo.tcrypt.ru:8080/TranscryptApi.svc" />
+    </wsdl:port>
+    <wsdl:port name="PrivateApi" binding="tns:PrivateApi">
+      <soap:address location="http://demo.tcrypt.ru:8080/TranscryptApi.svc" />
+    </wsdl:port>
+    <wsdl:port name="TranscryptIdService" binding="tns:TranscryptIdService">
+      <soap:address location="http://demo.tcrypt.ru:8080/TranscryptApi.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

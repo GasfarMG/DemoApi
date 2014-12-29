@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+  <xs:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" />
+  <xs:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.Security.Cryptography.X509Certificates" />
+  <xs:complexType name="OperationResultOfArrayOfNotificationYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfNotification" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q1:ArrayOfNotification" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfNotificationYNsim8dq" nillable="true" type="tns:OperationResultOfArrayOfNotificationYNsim8dq" />
+  <xs:complexType name="OperationResultBase">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" minOccurs="0" name="Fault" nillable="true" type="q2:TranscryptApiFault">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Ошибка произошедшая в процессе обработки запроса. null - при успешном завершении запроса
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Результат выполнения запроса
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultBase" nillable="true" type="tns:OperationResultBase" />
+  <xs:complexType name="OperationResultOfboolean">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="boolean" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfboolean" nillable="true" type="tns:OperationResultOfboolean" />
+  <xs:complexType name="OperationResultOfTranscryptContact.StateCodeYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TranscryptContact.StateCode" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" type="q3:TranscryptContact.StateCode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfTranscryptContact.StateCodeYNsim8dq" nillable="true" type="tns:OperationResultOfTranscryptContact.StateCodeYNsim8dq" />
+  <xs:complexType name="OperationResultOfArrayOfTranscryptContactYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfTranscryptContact" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q4:ArrayOfTranscryptContact" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfTranscryptContactYNsim8dq" nillable="true" type="tns:OperationResultOfArrayOfTranscryptContactYNsim8dq" />
+  <xs:complexType name="OperationResultOfguid">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="guid" Namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfguid" nillable="true" type="tns:OperationResultOfguid" />
+  <xs:complexType name="OperationResultOfstring">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfstring" nillable="true" type="tns:OperationResultOfstring" />
+  <xs:complexType name="OperationResultOfCertificateInfoYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CertificateInfo" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q5:CertificateInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfCertificateInfoYNsim8dq" nillable="true" type="tns:OperationResultOfCertificateInfoYNsim8dq" />
+  <xs:complexType name="OperationResultOfEmployeeYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Employee" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q6:Employee" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfEmployeeYNsim8dq" nillable="true" type="tns:OperationResultOfEmployeeYNsim8dq" />
+  <xs:complexType name="OperationResultOfArrayOfCertificateInfoYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfCertificateInfo" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q7:ArrayOfCertificateInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfCertificateInfoYNsim8dq" nillable="true" type="tns:OperationResultOfArrayOfCertificateInfoYNsim8dq" />
+  <xs:complexType name="OperationResultOfArrayOfOrganizationYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfOrganization" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q8:ArrayOfOrganization" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfOrganizationYNsim8dq" nillable="true" type="tns:OperationResultOfArrayOfOrganizationYNsim8dq" />
+  <xs:complexType name="OperationResultOfMyOrganizationYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MyOrganization" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q9:MyOrganization" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfMyOrganizationYNsim8dq" nillable="true" type="tns:OperationResultOfMyOrganizationYNsim8dq" />
+  <xs:complexType name="OperationResultOfArrayOfSignedAlterOrganizationRequestYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfSignedAlterOrganizationRequest" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q10:ArrayOfSignedAlterOrganizationRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfSignedAlterOrganizationRequestYNsim8dq" nillable="true" type="tns:OperationResultOfArrayOfSignedAlterOrganizationRequestYNsim8dq" />
+  <xs:complexType name="OperationResultOfOrganizationYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Organization" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q11:Organization" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfOrganizationYNsim8dq" nillable="true" type="tns:OperationResultOfOrganizationYNsim8dq" />
+  <xs:complexType name="OperationResultOfbase64Binary">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="base64Binary" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfbase64Binary" nillable="true" type="tns:OperationResultOfbase64Binary" />
+  <xs:complexType name="OperationResultOfArrayOfEmployeeYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfEmployee" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q12:ArrayOfEmployee" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfEmployeeYNsim8dq" nillable="true" type="tns:OperationResultOfArrayOfEmployeeYNsim8dq" />
+  <xs:complexType name="OperationResultOfArrayOfDepartmentYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfDepartment" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q13:ArrayOfDepartment" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfDepartmentYNsim8dq" nillable="true" type="tns:OperationResultOfArrayOfDepartmentYNsim8dq" />
+  <xs:complexType name="OperationResultOfDepartmentYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Department" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q14:Department" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfDepartmentYNsim8dq" nillable="true" type="tns:OperationResultOfDepartmentYNsim8dq" />
+  <xs:complexType name="PagedOperationResultOfArrayOfDocumentsGroupYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PagedOperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfDocumentsGroup" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultOfArrayOfDocumentsGroupYNsim8dq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PagedOperationResultOfArrayOfDocumentsGroupYNsim8dq" nillable="true" type="tns:PagedOperationResultOfArrayOfDocumentsGroupYNsim8dq" />
+  <xs:complexType name="OperationResultOfArrayOfDocumentsGroupYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfDocumentsGroup" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q15:ArrayOfDocumentsGroup" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfDocumentsGroupYNsim8dq" nillable="true" type="tns:OperationResultOfArrayOfDocumentsGroupYNsim8dq" />
+  <xs:complexType name="OperationResultOfDocumentYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Document" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q16:Document" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfDocumentYNsim8dq" nillable="true" type="tns:OperationResultOfDocumentYNsim8dq" />
+  <xs:complexType name="OperationResultOfArrayOfTransactionYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfTransaction" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q17:ArrayOfTransaction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfTransactionYNsim8dq" nillable="true" type="tns:OperationResultOfArrayOfTransactionYNsim8dq" />
+  <xs:complexType name="OperationResultOfResponseForSendYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ResponseForSend" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q18:ResponseForSend" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfResponseForSendYNsim8dq" nillable="true" type="tns:OperationResultOfResponseForSendYNsim8dq" />
+  <xs:complexType name="OperationResultOfArrayOfintuHEDJ7Dj">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfint" Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Result" nillable="true" type="q19:ArrayOfint" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfintuHEDJ7Dj" nillable="true" type="tns:OperationResultOfArrayOfintuHEDJ7Dj" />
+  <xs:complexType name="OperationResultOfTransactionFileYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TransactionFile" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q20:TransactionFile" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfTransactionFileYNsim8dq" nillable="true" type="tns:OperationResultOfTransactionFileYNsim8dq" />
+  <xs:complexType name="OperationResultOfArrayOfguiduHEDJ7Dj">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfguid" Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Result" nillable="true" type="q21:ArrayOfguid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfguiduHEDJ7Dj" nillable="true" type="tns:OperationResultOfArrayOfguiduHEDJ7Dj" />
+  <xs:complexType name="OperationResultOfArrayOfDocumentYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfDocument" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q22:ArrayOfDocument" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfDocumentYNsim8dq" nillable="true" type="tns:OperationResultOfArrayOfDocumentYNsim8dq" />
+  <xs:complexType name="OperationResultOfArrayOfInvoiceInfoYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfInvoiceInfo" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q23:ArrayOfInvoiceInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfInvoiceInfoYNsim8dq" nillable="true" type="tns:OperationResultOfArrayOfInvoiceInfoYNsim8dq" />
+  <xs:complexType name="OperationResultOfInvoiceInfoYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="InvoiceInfo" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q24:InvoiceInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfInvoiceInfoYNsim8dq" nillable="true" type="tns:OperationResultOfInvoiceInfoYNsim8dq" />
+  <xs:complexType name="OperationResultOfDocflowMemberIdRequestYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DocflowMemberIdRequest" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q25:DocflowMemberIdRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfDocflowMemberIdRequestYNsim8dq" nillable="true" type="tns:OperationResultOfDocflowMemberIdRequestYNsim8dq" />
+  <xs:complexType name="OperationResultOfX509Certificate2QsfCyaWY">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="X509Certificate2" Namespace="http://schemas.datacontract.org/2004/07/System.Security.Cryptography.X509Certificates" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/System.Security.Cryptography.X509Certificates" minOccurs="0" name="Result" nillable="true" type="q26:X509Certificate2" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfX509Certificate2QsfCyaWY" nillable="true" type="tns:OperationResultOfX509Certificate2QsfCyaWY" />
+  <xs:complexType name="OperationResultOfArrayOfRegionYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfRegion" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q27:ArrayOfRegion" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfRegionYNsim8dq" nillable="true" type="tns:OperationResultOfArrayOfRegionYNsim8dq" />
+  <xs:complexType name="OperationResultOfArrayOfCountryYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfCountry" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q28:ArrayOfCountry" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfCountryYNsim8dq" nillable="true" type="tns:OperationResultOfArrayOfCountryYNsim8dq" />
+  <xs:complexType name="OperationResultOfCountryYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Country" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q29:Country" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfCountryYNsim8dq" nillable="true" type="tns:OperationResultOfCountryYNsim8dq" />
+  <xs:complexType name="OperationResultOfRegionYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Region" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q30:Region" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfRegionYNsim8dq" nillable="true" type="tns:OperationResultOfRegionYNsim8dq" />
+  <xs:complexType name="OperationResultOfConfirmStateYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ConfirmState" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" type="q31:ConfirmState" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfConfirmStateYNsim8dq" nillable="true" type="tns:OperationResultOfConfirmStateYNsim8dq" />
+</xs:schema>

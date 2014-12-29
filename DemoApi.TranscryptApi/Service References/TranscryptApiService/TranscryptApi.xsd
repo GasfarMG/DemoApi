@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="TranscryptApiFault">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Внутренняя ошибка API
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Сообщение об ошибке
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TranscryptApiFault" nillable="true" type="tns:TranscryptApiFault" />
+  <xs:complexType name="NeedPasswordFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TranscryptApiFault">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Логин пользователя для которого необходимо ввести пароль
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NeedPasswordFault" nillable="true" type="tns:NeedPasswordFault" />
+  <xs:complexType name="NoEmployeeFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TranscryptApiFault">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NoEmployeeFault" nillable="true" type="tns:NoEmployeeFault" />
+  <xs:complexType name="SecurityFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TranscryptApiFault">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SecurityFault" nillable="true" type="tns:SecurityFault" />
+  <xs:complexType name="ClientFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TranscryptApiFault">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClientFault" nillable="true" type="tns:ClientFault" />
+  <xs:complexType name="InvalidCertificateFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ClientFault">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InvalidCertificateFault" nillable="true" type="tns:InvalidCertificateFault" />
+  <xs:complexType name="InvalidTokenFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TranscryptApiFault">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InvalidTokenFault" nillable="true" type="tns:InvalidTokenFault" />
+  <xs:complexType name="ArgumentFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TranscryptApiFault">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ArgumentFault" nillable="true" type="tns:ArgumentFault" />
+  <xs:complexType name="IsNotInvoiceFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TranscryptApiFault">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IsNotInvoiceFault" nillable="true" type="tns:IsNotInvoiceFault" />
+  <xs:complexType name="StateFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TranscryptApiFault">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StateFault" nillable="true" type="tns:StateFault" />
+  <xs:complexType name="UnknownCertificateFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:InvalidCertificateFault">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UnknownCertificateFault" nillable="true" type="tns:UnknownCertificateFault" />
+  <xs:complexType name="OrganizationAlreadyExistsFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TranscryptApiFault">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExistedOrganizations" nillable="true" type="tns:ArrayOfOrganizationAlreadyExistsFault.OrganizationInfo">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Список существующих организаций
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrganizationAlreadyExistsFault" nillable="true" type="tns:OrganizationAlreadyExistsFault" />
+  <xs:complexType name="ArrayOfOrganizationAlreadyExistsFault.OrganizationInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrganizationAlreadyExistsFault.OrganizationInfo" nillable="true" type="tns:OrganizationAlreadyExistsFault.OrganizationInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrganizationAlreadyExistsFault.OrganizationInfo" nillable="true" type="tns:ArrayOfOrganizationAlreadyExistsFault.OrganizationInfo" />
+  <xs:complexType name="OrganizationAlreadyExistsFault.OrganizationInfo">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Информация об организации
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Inn" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            ИНН
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Kpp" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            КПП
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Название
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrganizationAlreadyExistsFault.OrganizationInfo" nillable="true" type="tns:OrganizationAlreadyExistsFault.OrganizationInfo" />
+  <xs:complexType name="UnqualifiedCertificateFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:InvalidCertificateFault">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UnqualifiedCertificateFault" nillable="true" type="tns:UnqualifiedCertificateFault" />
+  <xs:complexType name="ExpiredLinkFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TranscryptApiFault">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpiredLinkFault" nillable="true" type="tns:ExpiredLinkFault" />
+  <xs:complexType name="DocflowFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TranscryptApiFault">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocflowFault" nillable="true" type="tns:DocflowFault" />
+  <xs:complexType name="IncorrectLoginOrPasswordFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TranscryptApiFault">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IncorrectLoginOrPasswordFault" nillable="true" type="tns:IncorrectLoginOrPasswordFault" />
+  <xs:complexType name="InternalFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TranscryptApiFault">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InternalFault" nillable="true" type="tns:InternalFault" />
+  <xs:complexType name="InvalidSignatureFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TranscryptApiFault">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InvalidSignatureFault" nillable="true" type="tns:InvalidSignatureFault" />
+</xs:schema>

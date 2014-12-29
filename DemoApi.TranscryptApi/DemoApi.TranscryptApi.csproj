@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{25B6D49F-9029-4C00-8B99-3AF4BA613F58}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DemoApi.TranscryptApi</RootNamespace>
+    <AssemblyName>DemoApi.TranscryptApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CAPI, Version=1.0.37.47, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\CAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ITranscryptApi.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\TranscryptApiService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TranscryptApi.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfCertificateInfoYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfCountryYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfDepartmentYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfDocumentYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfEmployeeYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfguiduHEDJ7Dj.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfintuHEDJ7Dj.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfInvoiceInfoYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfNotificationYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfOrganizationYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfRegionYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfSignedAlterOrganizationRequestYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfTransactionYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfTranscryptContactYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfbase64Binary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfCertificateInfoYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfConfirmStateYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfCountryYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfDepartmentYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfDocflowMemberIdRequestYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfDocumentYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfEmployeeYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfguid.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfInvoiceInfoYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfMyOrganizationYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfOrganizationYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfRegionYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfResponseForSendYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfstring.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfTransactionFileYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfTranscryptContactStateCodeYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfX509Certificate2QsfCyaWY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.PagedOperationResultOfArrayOfDocumentsGroupYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\TranscryptApi.wsdl" />
+    <None Include="Service References\TranscryptApiService\TranscryptApi.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TranscryptApiService\TranscryptApi1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TranscryptApiService\TranscryptApi2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TranscryptApiService\TranscryptApi3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TranscryptApiService\TranscryptApi4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TranscryptApiService\TranscryptApi5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TranscryptApiService\TranscryptApi6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\TranscryptApiService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TranscryptApiService\TranscryptApi.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TranscryptApiService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TranscryptApiService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TranscryptApiService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
