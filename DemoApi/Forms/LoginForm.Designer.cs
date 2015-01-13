@@ -80,9 +80,9 @@ namespace DemoApi
 			this.docUploadBtn = new System.Windows.Forms.Button();
 			this.docReceiverLbl = new System.Windows.Forms.Label();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-			this.receiveDocumentsForResponseTxtBx = new System.Windows.Forms.TextBox();
 			this.receiveDocumentsForResponseBtn = new System.Windows.Forms.Button();
+			this.receiveDocumentsForResponseTxtBx = new System.Windows.Forms.TextBox();
+			this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
 			this.loginTbCtrl.SuspendLayout();
 			this.loginByPassTb.SuspendLayout();
 			this.loginByCertificateTb.SuspendLayout();
@@ -208,6 +208,7 @@ namespace DemoApi
 			this.loginByCertificateSelectTxtBx.Name = "loginByCertificateSelectTxtBx";
 			this.loginByCertificateSelectTxtBx.Size = new System.Drawing.Size(316, 20);
 			this.loginByCertificateSelectTxtBx.TabIndex = 1;
+			this.loginByCertificateSelectTxtBx.ReadOnly = true;
 			// 
 			// loginByCertificateSelectBtn
 			// 
@@ -223,7 +224,7 @@ namespace DemoApi
 			// 
 			this.loginPanel.AutoSize = true;
 			this.loginPanel.Controls.Add(this.loginTbCtrl);
-			this.loginPanel.Location = new System.Drawing.Point(12, 9);
+			this.loginPanel.Location = new System.Drawing.Point(149, 129);
 			this.loginPanel.Name = "loginPanel";
 			this.loginPanel.Size = new System.Drawing.Size(500, 303);
 			this.loginPanel.TabIndex = 5;
@@ -232,9 +233,9 @@ namespace DemoApi
 			// 
 			this.activeOrganizationPnl.Controls.Add(this.selectActiveOrganizationCmbBx);
 			this.activeOrganizationPnl.Controls.Add(this.selectActiveOrganizationLbl);
-			this.activeOrganizationPnl.Location = new System.Drawing.Point(12, 9);
+			this.activeOrganizationPnl.Location = new System.Drawing.Point(8, 4);
 			this.activeOrganizationPnl.Name = "activeOrganizationPnl";
-			this.activeOrganizationPnl.Size = new System.Drawing.Size(500, 283);
+			this.activeOrganizationPnl.Size = new System.Drawing.Size(790, 580);
 			this.activeOrganizationPnl.TabIndex = 6;
 			this.activeOrganizationPnl.Visible = false;
 			// 
@@ -242,7 +243,7 @@ namespace DemoApi
 			// 
 			this.selectActiveOrganizationCmbBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.selectActiveOrganizationCmbBx.FormattingEnabled = true;
-			this.selectActiveOrganizationCmbBx.Location = new System.Drawing.Point(89, 157);
+			this.selectActiveOrganizationCmbBx.Location = new System.Drawing.Point(259, 322);
 			this.selectActiveOrganizationCmbBx.Name = "selectActiveOrganizationCmbBx";
 			this.selectActiveOrganizationCmbBx.Size = new System.Drawing.Size(249, 21);
 			this.selectActiveOrganizationCmbBx.TabIndex = 2;
@@ -251,7 +252,7 @@ namespace DemoApi
 			// selectActiveOrganizationLbl
 			// 
 			this.selectActiveOrganizationLbl.AutoSize = true;
-			this.selectActiveOrganizationLbl.Location = new System.Drawing.Point(123, 51);
+			this.selectActiveOrganizationLbl.Location = new System.Drawing.Point(293, 216);
 			this.selectActiveOrganizationLbl.Name = "selectActiveOrganizationLbl";
 			this.selectActiveOrganizationLbl.Size = new System.Drawing.Size(181, 13);
 			this.selectActiveOrganizationLbl.TabIndex = 0;
@@ -263,10 +264,10 @@ namespace DemoApi
 			this.reportsTbCtrl.Controls.Add(this.addressBookTb);
 			this.reportsTbCtrl.Controls.Add(this.docSendTb);
 			this.reportsTbCtrl.Controls.Add(this.tabPage1);
-			this.reportsTbCtrl.Location = new System.Drawing.Point(12, 9);
+			this.reportsTbCtrl.Location = new System.Drawing.Point(8, 4);
 			this.reportsTbCtrl.Name = "reportsTbCtrl";
 			this.reportsTbCtrl.SelectedIndex = 0;
-			this.reportsTbCtrl.Size = new System.Drawing.Size(500, 312);
+			this.reportsTbCtrl.Size = new System.Drawing.Size(792, 580);
 			this.reportsTbCtrl.TabIndex = 7;
 			this.reportsTbCtrl.Visible = false;
 			this.reportsTbCtrl.VisibleChanged += new System.EventHandler(this.reportsTbCtrl_VisibilityChanged);
@@ -285,7 +286,7 @@ namespace DemoApi
 			this.documentsTb.Location = new System.Drawing.Point(4, 22);
 			this.documentsTb.Name = "documentsTb";
 			this.documentsTb.Padding = new System.Windows.Forms.Padding(3);
-			this.documentsTb.Size = new System.Drawing.Size(492, 286);
+			this.documentsTb.Size = new System.Drawing.Size(784, 554);
 			this.documentsTb.TabIndex = 0;
 			this.documentsTb.Text = "Работа с документами";
 			this.documentsTb.UseVisualStyleBackColor = true;
@@ -302,9 +303,9 @@ namespace DemoApi
 			// 
 			// filterBtn
 			// 
-			this.filterBtn.Location = new System.Drawing.Point(377, 65);
+			this.filterBtn.Location = new System.Drawing.Point(646, 68);
 			this.filterBtn.Name = "filterBtn";
-			this.filterBtn.Size = new System.Drawing.Size(109, 23);
+			this.filterBtn.Size = new System.Drawing.Size(129, 23);
 			this.filterBtn.TabIndex = 9;
 			this.filterBtn.Text = "Применить";
 			this.filterBtn.UseVisualStyleBackColor = true;
@@ -312,39 +313,39 @@ namespace DemoApi
 			// 
 			// updateDateFilterDtTmPckr
 			// 
-			this.updateDateFilterDtTmPckr.Location = new System.Drawing.Point(364, 42);
+			this.updateDateFilterDtTmPckr.Location = new System.Drawing.Point(593, 41);
 			this.updateDateFilterDtTmPckr.Name = "updateDateFilterDtTmPckr";
-			this.updateDateFilterDtTmPckr.Size = new System.Drawing.Size(122, 20);
+			this.updateDateFilterDtTmPckr.Size = new System.Drawing.Size(182, 20);
 			this.updateDateFilterDtTmPckr.TabIndex = 8;
 			// 
 			// createDateFilterDtTmPckr
 			// 
-			this.createDateFilterDtTmPckr.Location = new System.Drawing.Point(239, 42);
+			this.createDateFilterDtTmPckr.Location = new System.Drawing.Point(406, 41);
 			this.createDateFilterDtTmPckr.Name = "createDateFilterDtTmPckr";
-			this.createDateFilterDtTmPckr.Size = new System.Drawing.Size(118, 20);
+			this.createDateFilterDtTmPckr.Size = new System.Drawing.Size(181, 20);
 			this.createDateFilterDtTmPckr.TabIndex = 7;
 			// 
 			// statusFilterCmbBx
 			// 
 			this.statusFilterCmbBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.statusFilterCmbBx.FormattingEnabled = true;
-			this.statusFilterCmbBx.Location = new System.Drawing.Point(112, 41);
+			this.statusFilterCmbBx.Location = new System.Drawing.Point(278, 40);
 			this.statusFilterCmbBx.Name = "statusFilterCmbBx";
-			this.statusFilterCmbBx.Size = new System.Drawing.Size(121, 21);
+			this.statusFilterCmbBx.Size = new System.Drawing.Size(122, 21);
 			this.statusFilterCmbBx.TabIndex = 6;
 			// 
 			// agentNameFilterTxtBx
 			// 
 			this.agentNameFilterTxtBx.Location = new System.Drawing.Point(6, 41);
 			this.agentNameFilterTxtBx.Name = "agentNameFilterTxtBx";
-			this.agentNameFilterTxtBx.Size = new System.Drawing.Size(100, 20);
+			this.agentNameFilterTxtBx.Size = new System.Drawing.Size(266, 20);
 			this.agentNameFilterTxtBx.TabIndex = 5;
 			// 
 			// outBoxBtn
 			// 
-			this.outBoxBtn.Location = new System.Drawing.Point(84, 8);
+			this.outBoxBtn.Location = new System.Drawing.Point(135, 8);
 			this.outBoxBtn.Name = "outBoxBtn";
-			this.outBoxBtn.Size = new System.Drawing.Size(75, 23);
+			this.outBoxBtn.Size = new System.Drawing.Size(111, 23);
 			this.outBoxBtn.TabIndex = 4;
 			this.outBoxBtn.Text = "Исходящие";
 			this.outBoxBtn.UseVisualStyleBackColor = true;
@@ -354,7 +355,7 @@ namespace DemoApi
 			// 
 			this.inBoxBtn.Location = new System.Drawing.Point(6, 8);
 			this.inBoxBtn.Name = "inBoxBtn";
-			this.inBoxBtn.Size = new System.Drawing.Size(75, 23);
+			this.inBoxBtn.Size = new System.Drawing.Size(110, 23);
 			this.inBoxBtn.TabIndex = 3;
 			this.inBoxBtn.Text = "Входящие";
 			this.inBoxBtn.UseVisualStyleBackColor = true;
@@ -371,7 +372,7 @@ namespace DemoApi
 			this.reportsDtGrdVw.Name = "reportsDtGrdVw";
 			this.reportsDtGrdVw.ReadOnly = true;
 			this.reportsDtGrdVw.RowHeadersVisible = false;
-			this.reportsDtGrdVw.Size = new System.Drawing.Size(480, 188);
+			this.reportsDtGrdVw.Size = new System.Drawing.Size(769, 437);
 			this.reportsDtGrdVw.TabIndex = 2;
 			// 
 			// addressBookTb
@@ -380,7 +381,7 @@ namespace DemoApi
 			this.addressBookTb.Location = new System.Drawing.Point(4, 22);
 			this.addressBookTb.Name = "addressBookTb";
 			this.addressBookTb.Padding = new System.Windows.Forms.Padding(3);
-			this.addressBookTb.Size = new System.Drawing.Size(492, 286);
+			this.addressBookTb.Size = new System.Drawing.Size(781, 535);
 			this.addressBookTb.TabIndex = 1;
 			this.addressBookTb.Text = "Адресная книга";
 			this.addressBookTb.UseVisualStyleBackColor = true;
@@ -393,7 +394,7 @@ namespace DemoApi
 			this.addressBookTbCtrl.Location = new System.Drawing.Point(15, 37);
 			this.addressBookTbCtrl.Name = "addressBookTbCtrl";
 			this.addressBookTbCtrl.SelectedIndex = 0;
-			this.addressBookTbCtrl.Size = new System.Drawing.Size(460, 243);
+			this.addressBookTbCtrl.Size = new System.Drawing.Size(760, 492);
 			this.addressBookTbCtrl.TabIndex = 2;
 			this.addressBookTbCtrl.SelectedIndexChanged += new System.EventHandler(this.addressBookTbCtrl_TabIndexChanged);
 			this.addressBookTbCtrl.TabIndexChanged += new System.EventHandler(this.addressBookTbCtrl_TabIndexChanged);
@@ -408,14 +409,14 @@ namespace DemoApi
 			this.sendRequestTb.Location = new System.Drawing.Point(4, 22);
 			this.sendRequestTb.Name = "sendRequestTb";
 			this.sendRequestTb.Padding = new System.Windows.Forms.Padding(3);
-			this.sendRequestTb.Size = new System.Drawing.Size(452, 217);
+			this.sendRequestTb.Size = new System.Drawing.Size(752, 466);
 			this.sendRequestTb.TabIndex = 0;
 			this.sendRequestTb.Text = "Отправка";
 			this.sendRequestTb.UseVisualStyleBackColor = true;
 			// 
 			// sentRequestBtn
 			// 
-			this.sentRequestBtn.Location = new System.Drawing.Point(158, 127);
+			this.sentRequestBtn.Location = new System.Drawing.Point(377, 176);
 			this.sentRequestBtn.Name = "sentRequestBtn";
 			this.sentRequestBtn.Size = new System.Drawing.Size(122, 23);
 			this.sentRequestBtn.TabIndex = 4;
@@ -425,15 +426,15 @@ namespace DemoApi
 			// 
 			// commentRequestTxtBx
 			// 
-			this.commentRequestTxtBx.Location = new System.Drawing.Point(238, 83);
+			this.commentRequestTxtBx.Location = new System.Drawing.Point(228, 130);
 			this.commentRequestTxtBx.Name = "commentRequestTxtBx";
-			this.commentRequestTxtBx.Size = new System.Drawing.Size(208, 20);
+			this.commentRequestTxtBx.Size = new System.Drawing.Size(271, 20);
 			this.commentRequestTxtBx.TabIndex = 3;
 			// 
 			// commentRequestLbl
 			// 
 			this.commentRequestLbl.AutoSize = true;
-			this.commentRequestLbl.Location = new System.Drawing.Point(155, 83);
+			this.commentRequestLbl.Location = new System.Drawing.Point(145, 130);
 			this.commentRequestLbl.Name = "commentRequestLbl";
 			this.commentRequestLbl.Size = new System.Drawing.Size(77, 13);
 			this.commentRequestLbl.TabIndex = 2;
@@ -442,7 +443,7 @@ namespace DemoApi
 			// nameInnRequestLbl
 			// 
 			this.nameInnRequestLbl.AutoSize = true;
-			this.nameInnRequestLbl.Location = new System.Drawing.Point(16, 39);
+			this.nameInnRequestLbl.Location = new System.Drawing.Point(6, 61);
 			this.nameInnRequestLbl.Name = "nameInnRequestLbl";
 			this.nameInnRequestLbl.Size = new System.Drawing.Size(216, 13);
 			this.nameInnRequestLbl.TabIndex = 1;
@@ -450,9 +451,9 @@ namespace DemoApi
 			// 
 			// nameInnRequestTxtBx
 			// 
-			this.nameInnRequestTxtBx.Location = new System.Drawing.Point(238, 36);
+			this.nameInnRequestTxtBx.Location = new System.Drawing.Point(228, 57);
 			this.nameInnRequestTxtBx.Name = "nameInnRequestTxtBx";
-			this.nameInnRequestTxtBx.Size = new System.Drawing.Size(208, 20);
+			this.nameInnRequestTxtBx.Size = new System.Drawing.Size(271, 20);
 			this.nameInnRequestTxtBx.TabIndex = 0;
 			// 
 			// receiveRequestTb
@@ -463,14 +464,14 @@ namespace DemoApi
 			this.receiveRequestTb.Location = new System.Drawing.Point(4, 22);
 			this.receiveRequestTb.Name = "receiveRequestTb";
 			this.receiveRequestTb.Padding = new System.Windows.Forms.Padding(3);
-			this.receiveRequestTb.Size = new System.Drawing.Size(452, 217);
+			this.receiveRequestTb.Size = new System.Drawing.Size(752, 466);
 			this.receiveRequestTb.TabIndex = 1;
 			this.receiveRequestTb.Text = "Прием";
 			this.receiveRequestTb.UseVisualStyleBackColor = true;
 			// 
 			// rejectRequestBtn
 			// 
-			this.rejectRequestBtn.Location = new System.Drawing.Point(110, 188);
+			this.rejectRequestBtn.Location = new System.Drawing.Point(652, 437);
 			this.rejectRequestBtn.Name = "rejectRequestBtn";
 			this.rejectRequestBtn.Size = new System.Drawing.Size(93, 23);
 			this.rejectRequestBtn.TabIndex = 2;
@@ -480,7 +481,7 @@ namespace DemoApi
 			// 
 			// acceptRequestBtn
 			// 
-			this.acceptRequestBtn.Location = new System.Drawing.Point(6, 188);
+			this.acceptRequestBtn.Location = new System.Drawing.Point(548, 437);
 			this.acceptRequestBtn.Name = "acceptRequestBtn";
 			this.acceptRequestBtn.Size = new System.Drawing.Size(98, 23);
 			this.acceptRequestBtn.TabIndex = 1;
@@ -493,7 +494,7 @@ namespace DemoApi
 			this.receiveRequestLstBx.FormattingEnabled = true;
 			this.receiveRequestLstBx.Location = new System.Drawing.Point(6, 6);
 			this.receiveRequestLstBx.Name = "receiveRequestLstBx";
-			this.receiveRequestLstBx.Size = new System.Drawing.Size(440, 173);
+			this.receiveRequestLstBx.Size = new System.Drawing.Size(739, 420);
 			this.receiveRequestLstBx.TabIndex = 0;
 			// 
 			// sentRequestTb
@@ -502,7 +503,7 @@ namespace DemoApi
 			this.sentRequestTb.Location = new System.Drawing.Point(4, 22);
 			this.sentRequestTb.Name = "sentRequestTb";
 			this.sentRequestTb.Padding = new System.Windows.Forms.Padding(3);
-			this.sentRequestTb.Size = new System.Drawing.Size(452, 217);
+			this.sentRequestTb.Size = new System.Drawing.Size(752, 466);
 			this.sentRequestTb.TabIndex = 2;
 			this.sentRequestTb.Text = "Отправленные";
 			this.sentRequestTb.UseVisualStyleBackColor = true;
@@ -512,7 +513,7 @@ namespace DemoApi
 			this.sentRequestLstBx.FormattingEnabled = true;
 			this.sentRequestLstBx.Location = new System.Drawing.Point(6, 6);
 			this.sentRequestLstBx.Name = "sentRequestLstBx";
-			this.sentRequestLstBx.Size = new System.Drawing.Size(440, 199);
+			this.sentRequestLstBx.Size = new System.Drawing.Size(740, 446);
 			this.sentRequestLstBx.TabIndex = 0;
 			// 
 			// docSendTb
@@ -526,14 +527,14 @@ namespace DemoApi
 			this.docSendTb.Location = new System.Drawing.Point(4, 22);
 			this.docSendTb.Name = "docSendTb";
 			this.docSendTb.Padding = new System.Windows.Forms.Padding(3);
-			this.docSendTb.Size = new System.Drawing.Size(492, 286);
+			this.docSendTb.Size = new System.Drawing.Size(781, 535);
 			this.docSendTb.TabIndex = 2;
 			this.docSendTb.Text = "Отправка документов";
 			this.docSendTb.UseVisualStyleBackColor = true;
 			// 
 			// docSendBtn
 			// 
-			this.docSendBtn.Location = new System.Drawing.Point(194, 132);
+			this.docSendBtn.Location = new System.Drawing.Point(393, 201);
 			this.docSendBtn.Name = "docSendBtn";
 			this.docSendBtn.Size = new System.Drawing.Size(75, 23);
 			this.docSendBtn.TabIndex = 5;
@@ -544,7 +545,7 @@ namespace DemoApi
 			// docUploadLbl
 			// 
 			this.docUploadLbl.AutoSize = true;
-			this.docUploadLbl.Location = new System.Drawing.Point(30, 90);
+			this.docUploadLbl.Location = new System.Drawing.Point(24, 156);
 			this.docUploadLbl.Name = "docUploadLbl";
 			this.docUploadLbl.Size = new System.Drawing.Size(58, 13);
 			this.docUploadLbl.TabIndex = 4;
@@ -552,21 +553,21 @@ namespace DemoApi
 			// 
 			// docUploadTxtBx
 			// 
-			this.docUploadTxtBx.Location = new System.Drawing.Point(194, 88);
+			this.docUploadTxtBx.Location = new System.Drawing.Point(188, 154);
 			this.docUploadTxtBx.Name = "docUploadTxtBx";
 			this.docUploadTxtBx.Size = new System.Drawing.Size(250, 20);
 			this.docUploadTxtBx.TabIndex = 3;
 			// 
 			// docReceiverTxtBx
 			// 
-			this.docReceiverTxtBx.Location = new System.Drawing.Point(194, 59);
+			this.docReceiverTxtBx.Location = new System.Drawing.Point(188, 88);
 			this.docReceiverTxtBx.Name = "docReceiverTxtBx";
 			this.docReceiverTxtBx.Size = new System.Drawing.Size(280, 20);
 			this.docReceiverTxtBx.TabIndex = 2;
 			// 
 			// docUploadBtn
 			// 
-			this.docUploadBtn.Location = new System.Drawing.Point(450, 85);
+			this.docUploadBtn.Location = new System.Drawing.Point(444, 151);
 			this.docUploadBtn.Name = "docUploadBtn";
 			this.docUploadBtn.Size = new System.Drawing.Size(24, 23);
 			this.docUploadBtn.TabIndex = 1;
@@ -577,7 +578,7 @@ namespace DemoApi
 			// docReceiverLbl
 			// 
 			this.docReceiverLbl.AutoSize = true;
-			this.docReceiverLbl.Location = new System.Drawing.Point(30, 59);
+			this.docReceiverLbl.Location = new System.Drawing.Point(24, 88);
 			this.docReceiverLbl.Name = "docReceiverLbl";
 			this.docReceiverLbl.Size = new System.Drawing.Size(66, 13);
 			this.docReceiverLbl.TabIndex = 0;
@@ -590,39 +591,40 @@ namespace DemoApi
 			this.tabPage1.Location = new System.Drawing.Point(4, 22);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(492, 286);
+			this.tabPage1.Size = new System.Drawing.Size(781, 535);
 			this.tabPage1.TabIndex = 3;
 			this.tabPage1.Text = "Отправка ответов";
 			this.tabPage1.UseVisualStyleBackColor = true;
+			// 
+			// receiveDocumentsForResponseBtn
+			// 
+			this.receiveDocumentsForResponseBtn.Location = new System.Drawing.Point(599, 506);
+			this.receiveDocumentsForResponseBtn.Name = "receiveDocumentsForResponseBtn";
+			this.receiveDocumentsForResponseBtn.Size = new System.Drawing.Size(179, 23);
+			this.receiveDocumentsForResponseBtn.TabIndex = 1;
+			this.receiveDocumentsForResponseBtn.Text = "Получить уведомления";
+			this.receiveDocumentsForResponseBtn.UseVisualStyleBackColor = true;
+			this.receiveDocumentsForResponseBtn.Click += new System.EventHandler(this.receiveDocumentsForResponseBtn_Click);
 			// 
 			// receiveDocumentsForResponseTxtBx
 			// 
 			this.receiveDocumentsForResponseTxtBx.Location = new System.Drawing.Point(6, 6);
 			this.receiveDocumentsForResponseTxtBx.Multiline = true;
 			this.receiveDocumentsForResponseTxtBx.Name = "receiveDocumentsForResponseTxtBx";
-			this.receiveDocumentsForResponseTxtBx.Size = new System.Drawing.Size(480, 234);
+			this.receiveDocumentsForResponseTxtBx.ReadOnly = true;
+			this.receiveDocumentsForResponseTxtBx.Size = new System.Drawing.Size(769, 494);
 			this.receiveDocumentsForResponseTxtBx.TabIndex = 0;
-			// 
-			// receiveDocumentsForResponseBtn
-			// 
-			this.receiveDocumentsForResponseBtn.Location = new System.Drawing.Point(6, 246);
-			this.receiveDocumentsForResponseBtn.Name = "receiveDocumentsForResponseBtn";
-			this.receiveDocumentsForResponseBtn.Size = new System.Drawing.Size(75, 23);
-			this.receiveDocumentsForResponseBtn.TabIndex = 1;
-			this.receiveDocumentsForResponseBtn.Text = "Получить уведомления";
-			this.receiveDocumentsForResponseBtn.UseVisualStyleBackColor = true;
-			this.receiveDocumentsForResponseBtn.Click += new System.EventHandler(this.receiveDocumentsForResponseBtn_Click);
 			// 
 			// LoginForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.AutoSize = true;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.ClientSize = new System.Drawing.Size(933, 642);
+			this.ClientSize = new System.Drawing.Size(810, 596);
 			this.Controls.Add(this.reportsTbCtrl);
 			this.Controls.Add(this.activeOrganizationPnl);
 			this.Controls.Add(this.loginPanel);
+			this.MaximizeBox = false;
 			this.Name = "LoginForm";
 			this.Text = "Демонстрационный пример работы с Transcrypt API";
 			this.loginTbCtrl.ResumeLayout(false);

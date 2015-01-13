@@ -83,6 +83,10 @@ namespace DemoApi
 			{
 				FillOrganizationList(result);
 			}
+			else
+			{
+				Bases.ShowError(@"При авторизации по сертификату произошла ошибка.");
+			}
 		}
 
 		private void FillOrganizationList(Guid result)

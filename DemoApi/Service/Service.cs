@@ -42,15 +42,18 @@ namespace DemoApi.Service
 			cert.Import(certificate);
 			var capi = new CryptoAPI();
 			var secret = _api.GetRandomForLogin();
-			var res = capi.P7_SignMessage(Encoding.Unicode.GetBytes(secret.Result), cert.Thumbprint, true, false,
-				out signedRandom);
-			if (!res)
+
+			try
 			{
-				var authException = new Exception("Ошибка авторизации");
-				throw authException;
+				capi.P7_SignMessage(Encoding.Unicode.GetBytes(secret.Result), cert.Thumbprint, true, false,
+					out signedRandom);
+				var result = _api.LoginToCert(signedRandom);
+				return result.IsSuccess ? result.Result : Guid.Empty;
 			}
-			var result = _api.LoginToCert(signedRandom);
-			return result.IsSuccess ? result.Result : Guid.Empty;
+			catch (Exception)
+			{
+				return Guid.Empty;
+			}
 		}
 
 		#endregion
