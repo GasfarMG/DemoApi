@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-  <xs:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:complexType name="Notification.Filter">
     <xs:annotation>
       <xs:appinfo />
@@ -1126,6 +1126,47 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfCertificateInfo" nillable="true" type="tns:ArrayOfCertificateInfo" />
+  <xs:simpleType name="OriginalRequester">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Источник запроса
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ChangePassword">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            Изменение пароля
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BindUser">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            Призявка пользователя к сотруднику
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ChangeEmail">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            Изменение почты
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OriginalRequester" nillable="true" type="tns:OriginalRequester" />
   <xs:complexType name="ArrayOfOrganization">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Organization" nillable="true" type="tns:Organization" />
@@ -1228,6 +1269,41 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="SignedAlterOrganizationRequest" nillable="true" type="tns:SignedAlterOrganizationRequest" />
+  <xs:complexType name="Organization.Filter">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Фильтр
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Count" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Сколько записей необходимо вернуть
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SearchString" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Строка поиска
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="StartPosition" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Начиная с
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Organization.Filter" nillable="true" type="tns:Organization.Filter" />
   <xs:complexType name="ArrayOfEmployee">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Employee" nillable="true" type="tns:Employee" />
@@ -1323,6 +1399,14 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:FileForSend">
         <xs:sequence>
+          <xs:element minOccurs="0" name="DepartmentId" nillable="true" type="ser:guid">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Идентификатор департамента, куда отправляется отчет
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
           <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string">
             <xs:annotation>
               <xs:appinfo />
@@ -1397,6 +1481,126 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="FileForSend" nillable="true" type="tns:FileForSend" />
+  <xs:complexType name="Draft">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Черновик
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DocumentForSend">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GroupId" type="ser:guid">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Идентификатор группы
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Id" type="ser:guid">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Идентификатор
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Receiver" nillable="true" type="tns:Organization">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Получатель группы документов
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Sender" nillable="true" type="tns:Organization">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Отправитель группы документов
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="SenderDepartmentId" nillable="true" type="ser:guid">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Подразделение-отправитель документ
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Draft" nillable="true" type="tns:Draft" />
+  <xs:complexType name="DraftsGroup">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Группа черновиков
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateDateTime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Дата и время создания группы документов
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="DraftDocuments" nillable="true" type="tns:ArrayOfDraft">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Список документов входящих в группу
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Id" type="ser:guid">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Идентификатор группы документов
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Receiver" nillable="true" type="tns:Organization">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Получатель группы документов
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Sender" nillable="true" type="tns:Organization">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Отправитель группы документов
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="UpdateDateTime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Дата и время последнего обновления группы документов
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DraftsGroup" nillable="true" type="tns:DraftsGroup" />
+  <xs:complexType name="ArrayOfDraft">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Draft" nillable="true" type="tns:Draft" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDraft" nillable="true" type="tns:ArrayOfDraft" />
   <xs:complexType name="Document.Filter">
     <xs:annotation>
       <xs:appinfo />
@@ -1405,6 +1609,14 @@
             &lt;/summary&gt;</xs:documentation>
     </xs:annotation>
     <xs:sequence>
+      <xs:element minOccurs="0" name="AllowNotice" nillable="true" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Документы для которых необходимо сформировать ответные сообщения
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element minOccurs="0" name="DepartmentId" nillable="true" type="ser:guid">
         <xs:annotation>
           <xs:appinfo />
@@ -1427,14 +1639,6 @@
           <xs:documentation>&lt;summary&gt;
             Указывает на то что необходимо фильтровать документы по подразделению не зависимо от того что передано
             в параметре DepartmentId (для получения документов головного подразделения)
-            &lt;/summary&gt;</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element minOccurs="0" name="Month" type="xs:int">
-        <xs:annotation>
-          <xs:appinfo />
-          <xs:documentation>&lt;summary&gt;
-            Месяц
             &lt;/summary&gt;</xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -1518,6 +1722,14 @@
             &lt;/summary&gt;</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element minOccurs="0" name="ShowDeleted" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Отобразить удаленные
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime">
         <xs:annotation>
           <xs:appinfo />
@@ -1531,14 +1743,6 @@
           <xs:appinfo />
           <xs:documentation>&lt;summary&gt;
             Учитывать дочерние подразделения при поиске
-            &lt;/summary&gt;</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element minOccurs="0" name="Year" type="xs:int">
-        <xs:annotation>
-          <xs:appinfo />
-          <xs:documentation>&lt;summary&gt;
-            Год
             &lt;/summary&gt;</xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -1699,6 +1903,22 @@
             &lt;/summary&gt;</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element minOccurs="0" name="IsReceiverDeleted" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Признак - документ удален у получателя из входящих
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsSenderDeleted" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Признак - документ удален у отправителя из исходящих
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element minOccurs="0" name="NeedResign" type="xs:boolean">
         <xs:annotation>
           <xs:appinfo />
@@ -1774,6 +1994,128 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Document" nillable="true" type="tns:Document" />
+  <xs:complexType name="Draft.Filter">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Фильтр сообщений
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DepartmentId" nillable="true" type="ser:guid">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Подразделение, которому принадлежит документ
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Время окончания периода
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FilterByDepartment" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Указывает на то что необходимо фильтровать документы по подразделению не зависимо от того что передано
+            в параметре DepartmentId (для получения документов головного подразделения)
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="PageNum" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Номер страницы
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="PageSize" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Количество отображаемых документов на странице
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Receiver" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Идентификатор, название или ИНН/КПП получателя документа или их часть
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ReceiverDocflowMemberId" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Идентификатор получателя документа (для поиска точным совпадением)
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SearchString" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Строка поиска
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Sender" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Идентификатор, название или ИНН/КПП отправителя документа или их часть
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SenderDocflowMemberId" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Идентификатор отправителя документа (для поиска точным совпадением)
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SenderId" nillable="true" type="ser:guid">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Идентификатор отправителя
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Время начала периода
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="WithSubdepartments" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Учитывать дочерние подразделения при поиске
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Draft.Filter" nillable="true" type="tns:Draft.Filter" />
+  <xs:complexType name="ArrayOfDraftsGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DraftsGroup" nillable="true" type="tns:DraftsGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDraftsGroup" nillable="true" type="tns:ArrayOfDraftsGroup" />
   <xs:complexType name="ArrayOfTransaction">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Transaction" nillable="true" type="tns:Transaction" />
@@ -1984,6 +2326,65 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="ResponseForSend" nillable="true" type="tns:ResponseForSend" />
+  <xs:complexType name="ProcurationInfo">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Информация о доверенности
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Дополнительные сведения
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Дата
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Fio" nillable="true" type="tns:Fio">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            ФИО
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Number" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Номер
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="OrganizationName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Название организации
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Должность
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProcurationInfo" nillable="true" type="tns:ProcurationInfo" />
   <xs:simpleType name="DocflowDictionary.DocflowType">
     <xs:restriction base="xs:string">
       <xs:enumeration value="Invoice">

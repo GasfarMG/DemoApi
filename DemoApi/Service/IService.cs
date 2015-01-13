@@ -62,7 +62,7 @@ namespace DemoApi.Service
 		/// <param name="requestReceiverName">Получатель запроса</param>
 		/// <param name="description">Комментарий к запросу</param>
 		/// <returns></returns>
-		bool SendExchangeRequest(Guid tokenGuid, string requestReceiverName, string description);
+		bool SendExchangeRequest(Guid tokenGuid, TranscryptApi.TranscryptApiService.Organization.Filter requestReceiverName, string description);
 
 		/// <summary>
 		/// Получить список контактов указанной организации

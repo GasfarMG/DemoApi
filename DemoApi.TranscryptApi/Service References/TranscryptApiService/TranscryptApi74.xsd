@@ -19,23 +19,14 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="TranscryptApiFault" nillable="true" type="tns:TranscryptApiFault" />
-  <xs:complexType name="NeedPasswordFault">
+  <xs:complexType name="StateFault">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:TranscryptApiFault">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string">
-            <xs:annotation>
-              <xs:appinfo />
-              <xs:documentation>&lt;summary&gt;
-            Логин пользователя для которого необходимо ввести пароль
-            &lt;/summary&gt;</xs:documentation>
-            </xs:annotation>
-          </xs:element>
-        </xs:sequence>
+        <xs:sequence />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="NeedPasswordFault" nillable="true" type="tns:NeedPasswordFault" />
+  <xs:element name="StateFault" nillable="true" type="tns:StateFault" />
   <xs:complexType name="NoEmployeeFault">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:TranscryptApiFault">
@@ -76,14 +67,23 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="InvalidTokenFault" nillable="true" type="tns:InvalidTokenFault" />
-  <xs:complexType name="ArgumentFault">
+  <xs:complexType name="NeedPasswordFault">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:TranscryptApiFault">
-        <xs:sequence />
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Логин пользователя для которого необходимо ввести пароль
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="ArgumentFault" nillable="true" type="tns:ArgumentFault" />
+  <xs:element name="NeedPasswordFault" nillable="true" type="tns:NeedPasswordFault" />
   <xs:complexType name="IsNotInvoiceFault">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:TranscryptApiFault">
@@ -92,14 +92,14 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="IsNotInvoiceFault" nillable="true" type="tns:IsNotInvoiceFault" />
-  <xs:complexType name="StateFault">
+  <xs:complexType name="ArgumentFault">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:TranscryptApiFault">
         <xs:sequence />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="StateFault" nillable="true" type="tns:StateFault" />
+  <xs:element name="ArgumentFault" nillable="true" type="tns:ArgumentFault" />
   <xs:complexType name="UnknownCertificateFault">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:InvalidCertificateFault">
@@ -174,6 +174,22 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="UnqualifiedCertificateFault" nillable="true" type="tns:UnqualifiedCertificateFault" />
+  <xs:complexType name="DepartmentContainsDocumentsFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TranscryptApiFault">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DepartmentContainsDocumentsFault" nillable="true" type="tns:DepartmentContainsDocumentsFault" />
+  <xs:complexType name="UserExistFault">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TranscryptApiFault">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserExistFault" nillable="true" type="tns:UserExistFault" />
   <xs:complexType name="ExpiredLinkFault">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:TranscryptApiFault">

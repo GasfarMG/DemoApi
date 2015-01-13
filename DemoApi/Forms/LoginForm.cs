@@ -182,7 +182,7 @@ namespace DemoApi
 
 		private void sentRequestBtn_Click(object sender, EventArgs e)
 		{
-			var result = _service.SendExchangeRequest(_tokenGuid, nameInnRequestTxtBx.Text, commentRequestTxtBx.Text);
+			var result = _service.SendExchangeRequest(_tokenGuid, new TranscryptApi.TranscryptApiService.Organization.Filter { SearchString = nameInnRequestTxtBx.Text }, commentRequestTxtBx.Text);
 			if (result)
 				Bases.ShowInfo("Запрос успешно отправлен.");
 			else 

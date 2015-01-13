@@ -125,6 +125,12 @@
     <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfDocumentYNsim8dq.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfDraftsGroupYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfDraftYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfEmployeeYNsim8dq.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -161,34 +167,37 @@
     <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.PagedOperationResultOfArrayOfDocumentsGroupYNsim8dq.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\TranscryptApiService\TranscryptApi.wsdl" />
-    <None Include="Service References\TranscryptApiService\TranscryptApi.xsd">
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.PagedOperationResultOfArrayOfDraftsGroupYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\DemoApi.TranscryptApi.TranscryptApiService.PagedOperationResultOfArrayOfOrganizationYNsim8dq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TranscryptApiService\TranscryptApi1.wsdl" />
+    <None Include="Service References\TranscryptApiService\TranscryptApi7.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\TranscryptApiService\TranscryptApi1.xsd">
+    <None Include="Service References\TranscryptApiService\TranscryptApi71.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\TranscryptApiService\TranscryptApi2.xsd">
+    <None Include="Service References\TranscryptApiService\TranscryptApi72.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\TranscryptApiService\TranscryptApi3.xsd">
+    <None Include="Service References\TranscryptApiService\TranscryptApi73.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\TranscryptApiService\TranscryptApi4.xsd">
+    <None Include="Service References\TranscryptApiService\TranscryptApi74.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\TranscryptApiService\TranscryptApi5.xsd">
+    <None Include="Service References\TranscryptApiService\TranscryptApi75.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\TranscryptApiService\TranscryptApi6.xsd">
+    <None Include="Service References\TranscryptApiService\TranscryptApi76.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\TranscryptApiService\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\TranscryptApiService\TranscryptApi.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\TranscryptApiService\configuration91.svcinfo" />
@@ -201,6 +210,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TranscryptApiService\TranscryptApi1.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

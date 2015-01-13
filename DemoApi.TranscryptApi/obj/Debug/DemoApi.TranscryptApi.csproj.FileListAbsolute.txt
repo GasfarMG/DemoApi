@@ -5,3 +5,10 @@ C:\Users\gasfar-m\Documents\Visual Studio 2013\Projects\DemoApi\DemoApi.Transcry
 C:\Users\gasfar-m\Documents\Visual Studio 2013\Projects\DemoApi\DemoApi.TranscryptApi\obj\Debug\DemoApi.TranscryptApi.dll
 C:\Users\gasfar-m\Documents\Visual Studio 2013\Projects\DemoApi\DemoApi.TranscryptApi\obj\Debug\DemoApi.TranscryptApi.pdb
 C:\Users\gasfar-m\Documents\Visual Studio 2013\Projects\DemoApi\DemoApi.TranscryptApi\obj\Debug\DemoApi.TranscryptApi.csprojResolveAssemblyReference.cache
+D:\dev\DemoApi\DemoApi.TranscryptApi\obj\Debug\DemoApi.TranscryptApi.csprojResolveAssemblyReference.cache
+D:\dev\DemoApi\DemoApi.TranscryptApi\obj\Debug\DemoApi.TranscryptApi.dll
+D:\dev\DemoApi\DemoApi.TranscryptApi\obj\Debug\DemoApi.TranscryptApi.pdb
+D:\dev\DemoApi\DemoApi.TranscryptApi\bin\Debug\DemoApi.TranscryptApi.dll.config
+D:\dev\DemoApi\DemoApi.TranscryptApi\bin\Debug\DemoApi.TranscryptApi.dll
+D:\dev\DemoApi\DemoApi.TranscryptApi\bin\Debug\DemoApi.TranscryptApi.pdb
+D:\dev\DemoApi\DemoApi.TranscryptApi\bin\Debug\CAPI.dll

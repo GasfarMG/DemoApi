@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="YGtpPeQLKpKsPhQwxFzuZKNif4o=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="1T62Lh67ZjP9zbDZuNDzsCbQH0E=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="NotificationApi">
       <properties>
@@ -984,10 +984,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="NotificationApi" contract="TranscryptApiService.ITranscryptApiNotification" bindingType="basicHttpBinding" address="http://demo.tcrypt.ru:8080/TranscryptApi.svc" bindingConfiguration="NotificationApi">
+    <endpoint name="NotificationApi" contract="TranscryptApiService.ITranscryptApiNotification" bindingType="basicHttpBinding" address="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" bindingConfiguration="NotificationApi">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://demo.tcrypt.ru:8080/TranscryptApi.svc</serializedValue>
+          <serializedValue>http://192.168.130.149/tcapi-rc/TranscryptApi.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -1069,10 +1069,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="AddressBookApi" contract="TranscryptApiService.ITranscryptApiAddressBook" bindingType="basicHttpBinding" address="http://demo.tcrypt.ru:8080/TranscryptApi.svc" bindingConfiguration="AddressBookApi">
+    <endpoint name="AddressBookApi" contract="TranscryptApiService.ITranscryptApiAddressBook" bindingType="basicHttpBinding" address="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" bindingConfiguration="AddressBookApi">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://demo.tcrypt.ru:8080/TranscryptApi.svc</serializedValue>
+          <serializedValue>http://192.168.130.149/tcapi-rc/TranscryptApi.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -1154,10 +1154,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="AuthenticateApi" contract="TranscryptApiService.ITranscryptApiAuth" bindingType="basicHttpBinding" address="http://demo.tcrypt.ru:8080/TranscryptApi.svc" bindingConfiguration="AuthenticateApi">
+    <endpoint name="AuthenticateApi" contract="TranscryptApiService.ITranscryptApiAuth" bindingType="basicHttpBinding" address="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" bindingConfiguration="AuthenticateApi">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://demo.tcrypt.ru:8080/TranscryptApi.svc</serializedValue>
+          <serializedValue>http://192.168.130.149/tcapi-rc/TranscryptApi.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -1239,10 +1239,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="ProfileApi" contract="TranscryptApiService.ITranscryptApiProfile" bindingType="basicHttpBinding" address="http://demo.tcrypt.ru:8080/TranscryptApi.svc" bindingConfiguration="ProfileApi">
+    <endpoint name="ProfileApi" contract="TranscryptApiService.ITranscryptApiProfile" bindingType="basicHttpBinding" address="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" bindingConfiguration="ProfileApi">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://demo.tcrypt.ru:8080/TranscryptApi.svc</serializedValue>
+          <serializedValue>http://192.168.130.149/tcapi-rc/TranscryptApi.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -1324,10 +1324,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="TransportApi" contract="TranscryptApiService.ITranscryptApiTransport" bindingType="basicHttpBinding" address="http://demo.tcrypt.ru:8080/TranscryptApi.svc" bindingConfiguration="TransportApi">
+    <endpoint name="TransportApi" contract="TranscryptApiService.ITranscryptApiTransport" bindingType="basicHttpBinding" address="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" bindingConfiguration="TransportApi">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://demo.tcrypt.ru:8080/TranscryptApi.svc</serializedValue>
+          <serializedValue>http://192.168.130.149/tcapi-rc/TranscryptApi.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -1409,10 +1409,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="CertificateApi" contract="TranscryptApiService.ITranscryptApiCertificate" bindingType="basicHttpBinding" address="http://demo.tcrypt.ru:8080/TranscryptApi.svc" bindingConfiguration="CertificateApi">
+    <endpoint name="CertificateApi" contract="TranscryptApiService.ITranscryptApiCertificate" bindingType="basicHttpBinding" address="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" bindingConfiguration="CertificateApi">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://demo.tcrypt.ru:8080/TranscryptApi.svc</serializedValue>
+          <serializedValue>http://192.168.130.149/tcapi-rc/TranscryptApi.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -1494,10 +1494,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="DictionaryApi" contract="TranscryptApiService.ITranscryptApiDictionary" bindingType="basicHttpBinding" address="http://demo.tcrypt.ru:8080/TranscryptApi.svc" bindingConfiguration="DictionaryApi">
+    <endpoint name="DictionaryApi" contract="TranscryptApiService.ITranscryptApiDictionary" bindingType="basicHttpBinding" address="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" bindingConfiguration="DictionaryApi">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://demo.tcrypt.ru:8080/TranscryptApi.svc</serializedValue>
+          <serializedValue>http://192.168.130.149/tcapi-rc/TranscryptApi.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -1579,10 +1579,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="PrivateApi" contract="TranscryptApiService.ITranscryptApiPrivate" bindingType="basicHttpBinding" address="http://demo.tcrypt.ru:8080/TranscryptApi.svc" bindingConfiguration="PrivateApi">
+    <endpoint name="PrivateApi" contract="TranscryptApiService.ITranscryptApiPrivate" bindingType="basicHttpBinding" address="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" bindingConfiguration="PrivateApi">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://demo.tcrypt.ru:8080/TranscryptApi.svc</serializedValue>
+          <serializedValue>http://192.168.130.149/tcapi-rc/TranscryptApi.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -1664,10 +1664,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="TranscryptIdService" contract="TranscryptApiService.ITranscryptIdService" bindingType="basicHttpBinding" address="http://demo.tcrypt.ru:8080/TranscryptApi.svc" bindingConfiguration="TranscryptIdService">
+    <endpoint name="TranscryptIdService" contract="TranscryptApiService.ITranscryptIdService" bindingType="basicHttpBinding" address="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" bindingConfiguration="TranscryptIdService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://demo.tcrypt.ru:8080/TranscryptApi.svc</serializedValue>
+          <serializedValue>http://192.168.130.149/tcapi-rc/TranscryptApi.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

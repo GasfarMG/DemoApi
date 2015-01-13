@@ -342,6 +342,7 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfEmployeeYNsim8dq))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfCertificateInfoYNsim8dq))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfOrganizationYNsim8dq))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.PagedOperationResultOfArrayOfOrganizationYNsim8dq))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfMyOrganizationYNsim8dq))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfSignedAlterOrganizationRequestYNsim8dq))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfOrganizationYNsim8dq))]
@@ -349,8 +350,12 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfEmployeeYNsim8dq))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfDepartmentYNsim8dq))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfDepartmentYNsim8dq))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfDraftYNsim8dq))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfDraftsGroupYNsim8dq))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfDocumentsGroupYNsim8dq))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.PagedOperationResultOfArrayOfDocumentsGroupYNsim8dq))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfDraftsGroupYNsim8dq))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.PagedOperationResultOfArrayOfDraftsGroupYNsim8dq))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfDocumentYNsim8dq))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfTransactionYNsim8dq))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfResponseForSendYNsim8dq))]
@@ -429,7 +434,7 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TranscryptApiFault", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.NeedPasswordFault))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.StateFault))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.NoEmployeeFault))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.SecurityFault))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.ClientFault))]
@@ -437,10 +442,12 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.UnknownCertificateFault))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.UnqualifiedCertificateFault))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.InvalidTokenFault))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.ArgumentFault))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.NeedPasswordFault))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.IsNotInvoiceFault))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.StateFault))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.ArgumentFault))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.OrganizationAlreadyExistsFault))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.DepartmentContainsDocumentsFault))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.UserExistFault))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.ExpiredLinkFault))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.DocflowFault))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.IncorrectLoginOrPasswordFault))]
@@ -675,6 +682,7 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="OperationResultOfArrayOfOrganizationYNsim8dq", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.PagedOperationResultOfArrayOfOrganizationYNsim8dq))]
     public partial class OperationResultOfArrayOfOrganizationYNsim8dq : DemoApi.TranscryptApi.TranscryptApiService.OperationResultBase {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -689,6 +697,29 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
                 if ((object.ReferenceEquals(this.ResultField, value) != true)) {
                     this.ResultField = value;
                     this.RaisePropertyChanged("Result");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PagedOperationResultOfArrayOfOrganizationYNsim8dq", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API")]
+    [System.SerializableAttribute()]
+    public partial class PagedOperationResultOfArrayOfOrganizationYNsim8dq : DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfOrganizationYNsim8dq {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TotalField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Total {
+            get {
+                return this.TotalField;
+            }
+            set {
+                if ((this.TotalField.Equals(value) != true)) {
+                    this.TotalField = value;
+                    this.RaisePropertyChanged("Total");
                 }
             }
         }
@@ -857,6 +888,52 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OperationResultOfDraftYNsim8dq", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API")]
+    [System.SerializableAttribute()]
+    public partial class OperationResultOfDraftYNsim8dq : DemoApi.TranscryptApi.TranscryptApiService.OperationResultBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DemoApi.TranscryptApi.TranscryptApiService.Draft ResultField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DemoApi.TranscryptApi.TranscryptApiService.Draft Result {
+            get {
+                return this.ResultField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ResultField, value) != true)) {
+                    this.ResultField = value;
+                    this.RaisePropertyChanged("Result");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OperationResultOfDraftsGroupYNsim8dq", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API")]
+    [System.SerializableAttribute()]
+    public partial class OperationResultOfDraftsGroupYNsim8dq : DemoApi.TranscryptApi.TranscryptApiService.OperationResultBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DemoApi.TranscryptApi.TranscryptApiService.DraftsGroup ResultField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DemoApi.TranscryptApi.TranscryptApiService.DraftsGroup Result {
+            get {
+                return this.ResultField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ResultField, value) != true)) {
+                    this.ResultField = value;
+                    this.RaisePropertyChanged("Result");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="OperationResultOfArrayOfDocumentsGroupYNsim8dq", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API")]
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.PagedOperationResultOfArrayOfDocumentsGroupYNsim8dq))]
@@ -884,6 +961,53 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
     [System.Runtime.Serialization.DataContractAttribute(Name="PagedOperationResultOfArrayOfDocumentsGroupYNsim8dq", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API")]
     [System.SerializableAttribute()]
     public partial class PagedOperationResultOfArrayOfDocumentsGroupYNsim8dq : DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfDocumentsGroupYNsim8dq {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TotalField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Total {
+            get {
+                return this.TotalField;
+            }
+            set {
+                if ((this.TotalField.Equals(value) != true)) {
+                    this.TotalField = value;
+                    this.RaisePropertyChanged("Total");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OperationResultOfArrayOfDraftsGroupYNsim8dq", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.PagedOperationResultOfArrayOfDraftsGroupYNsim8dq))]
+    public partial class OperationResultOfArrayOfDraftsGroupYNsim8dq : DemoApi.TranscryptApi.TranscryptApiService.OperationResultBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DemoApi.TranscryptApi.TranscryptApiService.DraftsGroup[] ResultField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DemoApi.TranscryptApi.TranscryptApiService.DraftsGroup[] Result {
+            get {
+                return this.ResultField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ResultField, value) != true)) {
+                    this.ResultField = value;
+                    this.RaisePropertyChanged("Result");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PagedOperationResultOfArrayOfDraftsGroupYNsim8dq", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API")]
+    [System.SerializableAttribute()]
+    public partial class PagedOperationResultOfArrayOfDraftsGroupYNsim8dq : DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfDraftsGroupYNsim8dq {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int TotalField;
@@ -1295,25 +1419,9 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="NeedPasswordFault", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="StateFault", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults")]
     [System.SerializableAttribute()]
-    public partial class NeedPasswordFault : DemoApi.TranscryptApi.TranscryptApiService.TranscryptApiFault {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LoginField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Login {
-            get {
-                return this.LoginField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LoginField, value) != true)) {
-                    this.LoginField = value;
-                    this.RaisePropertyChanged("Login");
-                }
-            }
-        }
+    public partial class StateFault : DemoApi.TranscryptApi.TranscryptApiService.TranscryptApiFault {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1372,9 +1480,25 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ArgumentFault", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NeedPasswordFault", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults")]
     [System.SerializableAttribute()]
-    public partial class ArgumentFault : DemoApi.TranscryptApi.TranscryptApiService.TranscryptApiFault {
+    public partial class NeedPasswordFault : DemoApi.TranscryptApi.TranscryptApiService.TranscryptApiFault {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LoginField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Login {
+            get {
+                return this.LoginField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LoginField, value) != true)) {
+                    this.LoginField = value;
+                    this.RaisePropertyChanged("Login");
+                }
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1386,9 +1510,9 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="StateFault", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ArgumentFault", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults")]
     [System.SerializableAttribute()]
-    public partial class StateFault : DemoApi.TranscryptApi.TranscryptApiService.TranscryptApiFault {
+    public partial class ArgumentFault : DemoApi.TranscryptApi.TranscryptApiService.TranscryptApiFault {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1488,6 +1612,20 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
                 }
             }
         }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DepartmentContainsDocumentsFault", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults")]
+    [System.SerializableAttribute()]
+    public partial class DepartmentContainsDocumentsFault : DemoApi.TranscryptApi.TranscryptApiService.TranscryptApiFault {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UserExistFault", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults")]
+    [System.SerializableAttribute()]
+    public partial class UserExistFault : DemoApi.TranscryptApi.TranscryptApiService.TranscryptApiFault {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1913,6 +2051,82 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+        
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+        [System.Runtime.Serialization.DataContractAttribute(Name="Organization.Filter", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain")]
+        [System.SerializableAttribute()]
+        public partial class Filter : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+            
+            [System.NonSerializedAttribute()]
+            private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+            
+            [System.Runtime.Serialization.OptionalFieldAttribute()]
+            private int CountField;
+            
+            [System.Runtime.Serialization.OptionalFieldAttribute()]
+            private string SearchStringField;
+            
+            [System.Runtime.Serialization.OptionalFieldAttribute()]
+            private int StartPositionField;
+            
+            public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+                get {
+                    return this.extensionDataField;
+                }
+                set {
+                    this.extensionDataField = value;
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int Count {
+                get {
+                    return this.CountField;
+                }
+                set {
+                    if ((this.CountField.Equals(value) != true)) {
+                        this.CountField = value;
+                        this.RaisePropertyChanged("Count");
+                    }
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string SearchString {
+                get {
+                    return this.SearchStringField;
+                }
+                set {
+                    if ((object.ReferenceEquals(this.SearchStringField, value) != true)) {
+                        this.SearchStringField = value;
+                        this.RaisePropertyChanged("SearchString");
+                    }
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int StartPosition {
+                get {
+                    return this.StartPositionField;
+                }
+                set {
+                    if ((this.StartPositionField.Equals(value) != true)) {
+                        this.StartPositionField = value;
+                        this.RaisePropertyChanged("StartPosition");
+                    }
+                }
+            }
+            
+            public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+            
+            protected void RaisePropertyChanged(string propertyName) {
+                System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+                if ((propertyChanged != null)) {
+                    propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+                }
             }
         }
     }
@@ -3425,6 +3639,677 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Draft", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain")]
+    [System.SerializableAttribute()]
+    public partial class Draft : DemoApi.TranscryptApi.TranscryptApiService.DocumentForSend {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid GroupIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DemoApi.TranscryptApi.TranscryptApiService.Organization ReceiverField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DemoApi.TranscryptApi.TranscryptApiService.Organization SenderField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> SenderDepartmentIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid GroupId {
+            get {
+                return this.GroupIdField;
+            }
+            set {
+                if ((this.GroupIdField.Equals(value) != true)) {
+                    this.GroupIdField = value;
+                    this.RaisePropertyChanged("GroupId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DemoApi.TranscryptApi.TranscryptApiService.Organization Receiver {
+            get {
+                return this.ReceiverField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ReceiverField, value) != true)) {
+                    this.ReceiverField = value;
+                    this.RaisePropertyChanged("Receiver");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DemoApi.TranscryptApi.TranscryptApiService.Organization Sender {
+            get {
+                return this.SenderField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SenderField, value) != true)) {
+                    this.SenderField = value;
+                    this.RaisePropertyChanged("Sender");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> SenderDepartmentId {
+            get {
+                return this.SenderDepartmentIdField;
+            }
+            set {
+                if ((this.SenderDepartmentIdField.Equals(value) != true)) {
+                    this.SenderDepartmentIdField = value;
+                    this.RaisePropertyChanged("SenderDepartmentId");
+                }
+            }
+        }
+        
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+        [System.Runtime.Serialization.DataContractAttribute(Name="Draft.Filter", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain")]
+        [System.SerializableAttribute()]
+        public partial class Filter : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+            
+            [System.NonSerializedAttribute()]
+            private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+            
+            [System.Runtime.Serialization.OptionalFieldAttribute()]
+            private System.Nullable<System.Guid> DepartmentIdField;
+            
+            [System.Runtime.Serialization.OptionalFieldAttribute()]
+            private System.Nullable<System.DateTime> EndTimeField;
+            
+            [System.Runtime.Serialization.OptionalFieldAttribute()]
+            private bool FilterByDepartmentField;
+            
+            [System.Runtime.Serialization.OptionalFieldAttribute()]
+            private int PageNumField;
+            
+            [System.Runtime.Serialization.OptionalFieldAttribute()]
+            private int PageSizeField;
+            
+            [System.Runtime.Serialization.OptionalFieldAttribute()]
+            private string ReceiverField;
+            
+            [System.Runtime.Serialization.OptionalFieldAttribute()]
+            private string ReceiverDocflowMemberIdField;
+            
+            [System.Runtime.Serialization.OptionalFieldAttribute()]
+            private string SearchStringField;
+            
+            [System.Runtime.Serialization.OptionalFieldAttribute()]
+            private string SenderField;
+            
+            [System.Runtime.Serialization.OptionalFieldAttribute()]
+            private string SenderDocflowMemberIdField;
+            
+            [System.Runtime.Serialization.OptionalFieldAttribute()]
+            private System.Nullable<System.Guid> SenderIdField;
+            
+            [System.Runtime.Serialization.OptionalFieldAttribute()]
+            private System.Nullable<System.DateTime> StartTimeField;
+            
+            [System.Runtime.Serialization.OptionalFieldAttribute()]
+            private bool WithSubdepartmentsField;
+            
+            public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+                get {
+                    return this.extensionDataField;
+                }
+                set {
+                    this.extensionDataField = value;
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public System.Nullable<System.Guid> DepartmentId {
+                get {
+                    return this.DepartmentIdField;
+                }
+                set {
+                    if ((this.DepartmentIdField.Equals(value) != true)) {
+                        this.DepartmentIdField = value;
+                        this.RaisePropertyChanged("DepartmentId");
+                    }
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public System.Nullable<System.DateTime> EndTime {
+                get {
+                    return this.EndTimeField;
+                }
+                set {
+                    if ((this.EndTimeField.Equals(value) != true)) {
+                        this.EndTimeField = value;
+                        this.RaisePropertyChanged("EndTime");
+                    }
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public bool FilterByDepartment {
+                get {
+                    return this.FilterByDepartmentField;
+                }
+                set {
+                    if ((this.FilterByDepartmentField.Equals(value) != true)) {
+                        this.FilterByDepartmentField = value;
+                        this.RaisePropertyChanged("FilterByDepartment");
+                    }
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int PageNum {
+                get {
+                    return this.PageNumField;
+                }
+                set {
+                    if ((this.PageNumField.Equals(value) != true)) {
+                        this.PageNumField = value;
+                        this.RaisePropertyChanged("PageNum");
+                    }
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public int PageSize {
+                get {
+                    return this.PageSizeField;
+                }
+                set {
+                    if ((this.PageSizeField.Equals(value) != true)) {
+                        this.PageSizeField = value;
+                        this.RaisePropertyChanged("PageSize");
+                    }
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string Receiver {
+                get {
+                    return this.ReceiverField;
+                }
+                set {
+                    if ((object.ReferenceEquals(this.ReceiverField, value) != true)) {
+                        this.ReceiverField = value;
+                        this.RaisePropertyChanged("Receiver");
+                    }
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string ReceiverDocflowMemberId {
+                get {
+                    return this.ReceiverDocflowMemberIdField;
+                }
+                set {
+                    if ((object.ReferenceEquals(this.ReceiverDocflowMemberIdField, value) != true)) {
+                        this.ReceiverDocflowMemberIdField = value;
+                        this.RaisePropertyChanged("ReceiverDocflowMemberId");
+                    }
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string SearchString {
+                get {
+                    return this.SearchStringField;
+                }
+                set {
+                    if ((object.ReferenceEquals(this.SearchStringField, value) != true)) {
+                        this.SearchStringField = value;
+                        this.RaisePropertyChanged("SearchString");
+                    }
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string Sender {
+                get {
+                    return this.SenderField;
+                }
+                set {
+                    if ((object.ReferenceEquals(this.SenderField, value) != true)) {
+                        this.SenderField = value;
+                        this.RaisePropertyChanged("Sender");
+                    }
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public string SenderDocflowMemberId {
+                get {
+                    return this.SenderDocflowMemberIdField;
+                }
+                set {
+                    if ((object.ReferenceEquals(this.SenderDocflowMemberIdField, value) != true)) {
+                        this.SenderDocflowMemberIdField = value;
+                        this.RaisePropertyChanged("SenderDocflowMemberId");
+                    }
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public System.Nullable<System.Guid> SenderId {
+                get {
+                    return this.SenderIdField;
+                }
+                set {
+                    if ((this.SenderIdField.Equals(value) != true)) {
+                        this.SenderIdField = value;
+                        this.RaisePropertyChanged("SenderId");
+                    }
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public System.Nullable<System.DateTime> StartTime {
+                get {
+                    return this.StartTimeField;
+                }
+                set {
+                    if ((this.StartTimeField.Equals(value) != true)) {
+                        this.StartTimeField = value;
+                        this.RaisePropertyChanged("StartTime");
+                    }
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public bool WithSubdepartments {
+                get {
+                    return this.WithSubdepartmentsField;
+                }
+                set {
+                    if ((this.WithSubdepartmentsField.Equals(value) != true)) {
+                        this.WithSubdepartmentsField = value;
+                        this.RaisePropertyChanged("WithSubdepartments");
+                    }
+                }
+            }
+            
+            public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+            
+            protected void RaisePropertyChanged(string propertyName) {
+                System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+                if ((propertyChanged != null)) {
+                    propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FileForSend", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.ResponseForSend))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.DocumentForSend))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.Draft))]
+    public partial class FileForSend : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] FileContentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FileNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[][] SignaturesField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] FileContent {
+            get {
+                return this.FileContentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FileContentField, value) != true)) {
+                    this.FileContentField = value;
+                    this.RaisePropertyChanged("FileContent");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FileName {
+            get {
+                return this.FileNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FileNameField, value) != true)) {
+                    this.FileNameField = value;
+                    this.RaisePropertyChanged("FileName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[][] Signatures {
+            get {
+                return this.SignaturesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SignaturesField, value) != true)) {
+                    this.SignaturesField = value;
+                    this.RaisePropertyChanged("Signatures");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseForSend", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain")]
+    [System.SerializableAttribute()]
+    public partial class ResponseForSend : DemoApi.TranscryptApi.TranscryptApiService.FileForSend {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int FileCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TransactionCodeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int FileCode {
+            get {
+                return this.FileCodeField;
+            }
+            set {
+                if ((this.FileCodeField.Equals(value) != true)) {
+                    this.FileCodeField = value;
+                    this.RaisePropertyChanged("FileCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TransactionCode {
+            get {
+                return this.TransactionCodeField;
+            }
+            set {
+                if ((this.TransactionCodeField.Equals(value) != true)) {
+                    this.TransactionCodeField = value;
+                    this.RaisePropertyChanged("TransactionCode");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DocumentForSend", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.Draft))]
+    public partial class DocumentForSend : DemoApi.TranscryptApi.TranscryptApiService.FileForSend {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> DepartmentIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int DocflowTypeCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool NeedResignField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TitleField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UnformalizedDocumentTypeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> DepartmentId {
+            get {
+                return this.DepartmentIdField;
+            }
+            set {
+                if ((this.DepartmentIdField.Equals(value) != true)) {
+                    this.DepartmentIdField = value;
+                    this.RaisePropertyChanged("DepartmentId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int DocflowTypeCode {
+            get {
+                return this.DocflowTypeCodeField;
+            }
+            set {
+                if ((this.DocflowTypeCodeField.Equals(value) != true)) {
+                    this.DocflowTypeCodeField = value;
+                    this.RaisePropertyChanged("DocflowTypeCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool NeedResign {
+            get {
+                return this.NeedResignField;
+            }
+            set {
+                if ((this.NeedResignField.Equals(value) != true)) {
+                    this.NeedResignField = value;
+                    this.RaisePropertyChanged("NeedResign");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Title {
+            get {
+                return this.TitleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
+                    this.TitleField = value;
+                    this.RaisePropertyChanged("Title");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UnformalizedDocumentType {
+            get {
+                return this.UnformalizedDocumentTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UnformalizedDocumentTypeField, value) != true)) {
+                    this.UnformalizedDocumentTypeField = value;
+                    this.RaisePropertyChanged("UnformalizedDocumentType");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DraftsGroup", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain")]
+    [System.SerializableAttribute()]
+    public partial class DraftsGroup : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime CreateDateTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DemoApi.TranscryptApi.TranscryptApiService.Draft[] DraftDocumentsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DemoApi.TranscryptApi.TranscryptApiService.Organization ReceiverField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DemoApi.TranscryptApi.TranscryptApiService.Organization SenderField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime UpdateDateTimeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime CreateDateTime {
+            get {
+                return this.CreateDateTimeField;
+            }
+            set {
+                if ((this.CreateDateTimeField.Equals(value) != true)) {
+                    this.CreateDateTimeField = value;
+                    this.RaisePropertyChanged("CreateDateTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DemoApi.TranscryptApi.TranscryptApiService.Draft[] DraftDocuments {
+            get {
+                return this.DraftDocumentsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DraftDocumentsField, value) != true)) {
+                    this.DraftDocumentsField = value;
+                    this.RaisePropertyChanged("DraftDocuments");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DemoApi.TranscryptApi.TranscryptApiService.Organization Receiver {
+            get {
+                return this.ReceiverField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ReceiverField, value) != true)) {
+                    this.ReceiverField = value;
+                    this.RaisePropertyChanged("Receiver");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DemoApi.TranscryptApi.TranscryptApiService.Organization Sender {
+            get {
+                return this.SenderField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SenderField, value) != true)) {
+                    this.SenderField = value;
+                    this.RaisePropertyChanged("Sender");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime UpdateDateTime {
+            get {
+                return this.UpdateDateTimeField;
+            }
+            set {
+                if ((this.UpdateDateTimeField.Equals(value) != true)) {
+                    this.UpdateDateTimeField = value;
+                    this.RaisePropertyChanged("UpdateDateTime");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DocumentsGroup", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain")]
     [System.SerializableAttribute()]
     public partial class DocumentsGroup : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -3581,6 +4466,12 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
         private bool IsDraftField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsReceiverDeletedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsSenderDeletedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool NeedResignField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -3704,6 +4595,32 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
                 if ((this.IsDraftField.Equals(value) != true)) {
                     this.IsDraftField = value;
                     this.RaisePropertyChanged("IsDraft");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsReceiverDeleted {
+            get {
+                return this.IsReceiverDeletedField;
+            }
+            set {
+                if ((this.IsReceiverDeletedField.Equals(value) != true)) {
+                    this.IsReceiverDeletedField = value;
+                    this.RaisePropertyChanged("IsReceiverDeleted");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsSenderDeleted {
+            get {
+                return this.IsSenderDeletedField;
+            }
+            set {
+                if ((this.IsSenderDeletedField.Equals(value) != true)) {
+                    this.IsSenderDeletedField = value;
+                    this.RaisePropertyChanged("IsSenderDeleted");
                 }
             }
         }
@@ -3844,6 +4761,9 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
             private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
             
             [System.Runtime.Serialization.OptionalFieldAttribute()]
+            private System.Nullable<bool> AllowNoticeField;
+            
+            [System.Runtime.Serialization.OptionalFieldAttribute()]
             private System.Nullable<System.Guid> DepartmentIdField;
             
             [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -3851,9 +4771,6 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
             
             [System.Runtime.Serialization.OptionalFieldAttribute()]
             private bool FilterByDepartmentField;
-            
-            [System.Runtime.Serialization.OptionalFieldAttribute()]
-            private int MonthField;
             
             [System.Runtime.Serialization.OptionalFieldAttribute()]
             private int PageNumField;
@@ -3886,13 +4803,13 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
             private System.Nullable<DemoApi.TranscryptApi.TranscryptApiService.DocumentState> SenderStateField;
             
             [System.Runtime.Serialization.OptionalFieldAttribute()]
+            private bool ShowDeletedField;
+            
+            [System.Runtime.Serialization.OptionalFieldAttribute()]
             private System.Nullable<System.DateTime> StartTimeField;
             
             [System.Runtime.Serialization.OptionalFieldAttribute()]
             private bool WithSubdepartmentsField;
-            
-            [System.Runtime.Serialization.OptionalFieldAttribute()]
-            private int YearField;
             
             public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
                 get {
@@ -3900,6 +4817,19 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
                 }
                 set {
                     this.extensionDataField = value;
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public System.Nullable<bool> AllowNotice {
+                get {
+                    return this.AllowNoticeField;
+                }
+                set {
+                    if ((this.AllowNoticeField.Equals(value) != true)) {
+                        this.AllowNoticeField = value;
+                        this.RaisePropertyChanged("AllowNotice");
+                    }
                 }
             }
             
@@ -3938,19 +4868,6 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
                     if ((this.FilterByDepartmentField.Equals(value) != true)) {
                         this.FilterByDepartmentField = value;
                         this.RaisePropertyChanged("FilterByDepartment");
-                    }
-                }
-            }
-            
-            [System.Runtime.Serialization.DataMemberAttribute()]
-            public int Month {
-                get {
-                    return this.MonthField;
-                }
-                set {
-                    if ((this.MonthField.Equals(value) != true)) {
-                        this.MonthField = value;
-                        this.RaisePropertyChanged("Month");
                     }
                 }
             }
@@ -4086,6 +5003,19 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
             }
             
             [System.Runtime.Serialization.DataMemberAttribute()]
+            public bool ShowDeleted {
+                get {
+                    return this.ShowDeletedField;
+                }
+                set {
+                    if ((this.ShowDeletedField.Equals(value) != true)) {
+                        this.ShowDeletedField = value;
+                        this.RaisePropertyChanged("ShowDeleted");
+                    }
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute()]
             public System.Nullable<System.DateTime> StartTime {
                 get {
                     return this.StartTimeField;
@@ -4107,19 +5037,6 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
                     if ((this.WithSubdepartmentsField.Equals(value) != true)) {
                         this.WithSubdepartmentsField = value;
                         this.RaisePropertyChanged("WithSubdepartments");
-                    }
-                }
-            }
-            
-            [System.Runtime.Serialization.DataMemberAttribute()]
-            public int Year {
-                get {
-                    return this.YearField;
-                }
-                set {
-                    if ((this.YearField.Equals(value) != true)) {
-                        this.YearField = value;
-                        this.RaisePropertyChanged("Year");
                     }
                 }
             }
@@ -4672,211 +5589,6 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseForSend", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain")]
-    [System.SerializableAttribute()]
-    public partial class ResponseForSend : DemoApi.TranscryptApi.TranscryptApiService.FileForSend {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int FileCodeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TransactionCodeField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int FileCode {
-            get {
-                return this.FileCodeField;
-            }
-            set {
-                if ((this.FileCodeField.Equals(value) != true)) {
-                    this.FileCodeField = value;
-                    this.RaisePropertyChanged("FileCode");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TransactionCode {
-            get {
-                return this.TransactionCodeField;
-            }
-            set {
-                if ((this.TransactionCodeField.Equals(value) != true)) {
-                    this.TransactionCodeField = value;
-                    this.RaisePropertyChanged("TransactionCode");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FileForSend", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.DocumentForSend))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.ResponseForSend))]
-    public partial class FileForSend : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private byte[] FileContentField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FileNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private byte[][] SignaturesField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public byte[] FileContent {
-            get {
-                return this.FileContentField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FileContentField, value) != true)) {
-                    this.FileContentField = value;
-                    this.RaisePropertyChanged("FileContent");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FileName {
-            get {
-                return this.FileNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FileNameField, value) != true)) {
-                    this.FileNameField = value;
-                    this.RaisePropertyChanged("FileName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public byte[][] Signatures {
-            get {
-                return this.SignaturesField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SignaturesField, value) != true)) {
-                    this.SignaturesField = value;
-                    this.RaisePropertyChanged("Signatures");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DocumentForSend", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain")]
-    [System.SerializableAttribute()]
-    public partial class DocumentForSend : DemoApi.TranscryptApi.TranscryptApiService.FileForSend {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int DocflowTypeCodeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool NeedResignField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TitleField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UnformalizedDocumentTypeField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description {
-            get {
-                return this.DescriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
-                    this.DescriptionField = value;
-                    this.RaisePropertyChanged("Description");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int DocflowTypeCode {
-            get {
-                return this.DocflowTypeCodeField;
-            }
-            set {
-                if ((this.DocflowTypeCodeField.Equals(value) != true)) {
-                    this.DocflowTypeCodeField = value;
-                    this.RaisePropertyChanged("DocflowTypeCode");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool NeedResign {
-            get {
-                return this.NeedResignField;
-            }
-            set {
-                if ((this.NeedResignField.Equals(value) != true)) {
-                    this.NeedResignField = value;
-                    this.RaisePropertyChanged("NeedResign");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Title {
-            get {
-                return this.TitleField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
-                    this.TitleField = value;
-                    this.RaisePropertyChanged("Title");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UnformalizedDocumentType {
-            get {
-                return this.UnformalizedDocumentTypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UnformalizedDocumentTypeField, value) != true)) {
-                    this.UnformalizedDocumentTypeField = value;
-                    this.RaisePropertyChanged("UnformalizedDocumentType");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DocflowMemberIdRequest", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain")]
     [System.SerializableAttribute()]
     public partial class DocflowMemberIdRequest : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -5002,6 +5714,145 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         Expired = 4,
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OriginalRequester", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain")]
+    public enum OriginalRequester : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ChangePassword = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        BindUser = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ChangeEmail = 3,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ProcurationInfo", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain")]
+    [System.SerializableAttribute()]
+    public partial class ProcurationInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AdditionalInfoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DemoApi.TranscryptApi.TranscryptApiService.Fio FioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OrganizationNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PostField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AdditionalInfo {
+            get {
+                return this.AdditionalInfoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AdditionalInfoField, value) != true)) {
+                    this.AdditionalInfoField = value;
+                    this.RaisePropertyChanged("AdditionalInfo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Date {
+            get {
+                return this.DateField;
+            }
+            set {
+                if ((this.DateField.Equals(value) != true)) {
+                    this.DateField = value;
+                    this.RaisePropertyChanged("Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DemoApi.TranscryptApi.TranscryptApiService.Fio Fio {
+            get {
+                return this.FioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FioField, value) != true)) {
+                    this.FioField = value;
+                    this.RaisePropertyChanged("Fio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Number {
+            get {
+                return this.NumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NumberField, value) != true)) {
+                    this.NumberField = value;
+                    this.RaisePropertyChanged("Number");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string OrganizationName {
+            get {
+                return this.OrganizationNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OrganizationNameField, value) != true)) {
+                    this.OrganizationNameField = value;
+                    this.RaisePropertyChanged("OrganizationName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Post {
+            get {
+                return this.PostField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PostField, value) != true)) {
+                    this.PostField = value;
+                    this.RaisePropertyChanged("Post");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
@@ -5264,10 +6115,13 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
         DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean ChangePassword(System.Guid token, string oldPassword, string newPassword);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITranscryptApiProfileEmployee/CheckPassword", ReplyAction="http://tempuri.org/ITranscryptApiProfileEmployee/CheckPasswordResponse")]
-        DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean CheckPassword(System.Guid token, string password);
+        DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean CheckPassword(System.Guid token, string password, DemoApi.TranscryptApi.TranscryptApiService.OriginalRequester requester);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITranscryptApiProfileEmployee/GetUserLogin", ReplyAction="http://tempuri.org/ITranscryptApiProfileEmployee/GetUserLoginResponse")]
         DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfstring GetUserLogin(System.Guid token, System.Guid userId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITranscryptApiProfileEmployee/BindUser", ReplyAction="http://tempuri.org/ITranscryptApiProfileEmployee/BindUserResponse")]
+        DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean BindUser(System.Guid token, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetAllOrganizations", ReplyAction="http://tempuri.org/ITranscryptApiProfileOrganization/GetAllOrganizationsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.ArgumentFault), Action="http://tempuri.org/ITranscryptApiProfileOrganization/GetAllOrganizationsArgumentF" +
@@ -5315,7 +6169,7 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
             "se")]
         [System.ServiceModel.FaultContractAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.ArgumentFault), Action="http://tempuri.org/ITranscryptApiProfileOrganization/FindOrganizationsToAddArgume" +
             "ntFaultFault", Name="ArgumentFault", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults")]
-        DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfOrganizationYNsim8dq FindOrganizationsToAdd(System.Guid token, string searchStr);
+        DemoApi.TranscryptApi.TranscryptApiService.PagedOperationResultOfArrayOfOrganizationYNsim8dq FindOrganizationsToAdd(System.Guid token, DemoApi.TranscryptApi.TranscryptApiService.Organization.Filter filter);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITranscryptApiProfileOrganization/GenerateAlterOrganizationReq" +
             "uest", ReplyAction="http://tempuri.org/ITranscryptApiProfileOrganization/GenerateAlterOrganizationReq" +
@@ -5427,12 +6281,16 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
             return base.Channel.ChangePassword(token, oldPassword, newPassword);
         }
         
-        public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean CheckPassword(System.Guid token, string password) {
-            return base.Channel.CheckPassword(token, password);
+        public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean CheckPassword(System.Guid token, string password, DemoApi.TranscryptApi.TranscryptApiService.OriginalRequester requester) {
+            return base.Channel.CheckPassword(token, password, requester);
         }
         
         public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfstring GetUserLogin(System.Guid token, System.Guid userId) {
             return base.Channel.GetUserLogin(token, userId);
+        }
+        
+        public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean BindUser(System.Guid token, string password) {
+            return base.Channel.BindUser(token, password);
         }
         
         public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfOrganizationYNsim8dq GetAllOrganizations(System.Guid token) {
@@ -5467,8 +6325,8 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
             return base.Channel.GetOrganization(token, docflowMemberId);
         }
         
-        public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfArrayOfOrganizationYNsim8dq FindOrganizationsToAdd(System.Guid token, string searchStr) {
-            return base.Channel.FindOrganizationsToAdd(token, searchStr);
+        public DemoApi.TranscryptApi.TranscryptApiService.PagedOperationResultOfArrayOfOrganizationYNsim8dq FindOrganizationsToAdd(System.Guid token, DemoApi.TranscryptApi.TranscryptApiService.Organization.Filter filter) {
+            return base.Channel.FindOrganizationsToAdd(token, filter);
         }
         
         public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfbase64Binary GenerateAlterOrganizationRequest(System.Guid token, DemoApi.TranscryptApi.TranscryptApiService.MyOrganization newDetails) {
@@ -5528,9 +6386,27 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
         [System.ServiceModel.FaultContractAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.ArgumentFault), Action="http://tempuri.org/ITranscryptApiTransport/SendDocumentsArgumentFaultFault", Name="ArgumentFault", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults")]
         DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfguid SendDocuments(System.Guid token, DemoApi.TranscryptApi.TranscryptApiService.DocumentForSend[] documents, string receiverId);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITranscryptApiTransport/SaveDraftGroup", ReplyAction="http://tempuri.org/ITranscryptApiTransport/SaveDraftGroupResponse")]
+        DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfguid SaveDraftGroup(System.Guid token, DemoApi.TranscryptApi.TranscryptApiService.DocumentForSend[] documents, System.Nullable<System.Guid> draftGroupId, string receiverId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITranscryptApiTransport/DeleteDraftGroup", ReplyAction="http://tempuri.org/ITranscryptApiTransport/DeleteDraftGroupResponse")]
+        DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean DeleteDraftGroup(System.Guid token, System.Guid draftGroupId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITranscryptApiTransport/SendDraftGroup", ReplyAction="http://tempuri.org/ITranscryptApiTransport/SendDraftGroupResponse")]
+        DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfguid SendDraftGroup(System.Guid token, System.Guid draftGroupId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITranscryptApiTransport/GetDarft", ReplyAction="http://tempuri.org/ITranscryptApiTransport/GetDarftResponse")]
+        DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfDraftYNsim8dq GetDarft(System.Guid token, System.Guid draftId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITranscryptApiTransport/GetDarftsGroup", ReplyAction="http://tempuri.org/ITranscryptApiTransport/GetDarftsGroupResponse")]
+        DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfDraftsGroupYNsim8dq GetDarftsGroup(System.Guid token, System.Guid draftGroupId);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITranscryptApiTransport/GetDocumentsGroups", ReplyAction="http://tempuri.org/ITranscryptApiTransport/GetDocumentsGroupsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.ArgumentFault), Action="http://tempuri.org/ITranscryptApiTransport/GetDocumentsGroupsArgumentFaultFault", Name="ArgumentFault", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults")]
         DemoApi.TranscryptApi.TranscryptApiService.PagedOperationResultOfArrayOfDocumentsGroupYNsim8dq GetDocumentsGroups(System.Guid token, DemoApi.TranscryptApi.TranscryptApiService.Document.Filter filter);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITranscryptApiTransport/GetDraftsGroups", ReplyAction="http://tempuri.org/ITranscryptApiTransport/GetDraftsGroupsResponse")]
+        DemoApi.TranscryptApi.TranscryptApiService.PagedOperationResultOfArrayOfDraftsGroupYNsim8dq GetDraftsGroups(System.Guid token, DemoApi.TranscryptApi.TranscryptApiService.Draft.Filter filter);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITranscryptApiTransport/GetDocument", ReplyAction="http://tempuri.org/ITranscryptApiTransport/GetDocumentResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.ArgumentFault), Action="http://tempuri.org/ITranscryptApiTransport/GetDocumentArgumentFaultFault", Name="ArgumentFault", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults")]
@@ -5565,7 +6441,7 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITranscryptApiTransport/GenerateAcceptanceNotice", ReplyAction="http://tempuri.org/ITranscryptApiTransport/GenerateAcceptanceNoticeResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.ArgumentFault), Action="http://tempuri.org/ITranscryptApiTransport/GenerateAcceptanceNoticeArgumentFaultF" +
             "ault", Name="ArgumentFault", Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults")]
-        DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfResponseForSendYNsim8dq GenerateAcceptanceNotice(System.Guid token, System.Guid documentId);
+        DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfResponseForSendYNsim8dq GenerateAcceptanceNotice(System.Guid token, System.Guid documentId, DemoApi.TranscryptApi.TranscryptApiService.ProcurationInfo procurationInfo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITranscryptApiTransport/CanCreateReceiveResult", ReplyAction="http://tempuri.org/ITranscryptApiTransport/CanCreateReceiveResultResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(DemoApi.TranscryptApi.TranscryptApiService.ArgumentFault), Action="http://tempuri.org/ITranscryptApiTransport/CanCreateReceiveResultArgumentFaultFau" +
@@ -5616,7 +6492,13 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
         DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfDocflowMemberIdRequestYNsim8dq GetDocflowMemberIdRequest(System.Guid token, System.Guid id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITranscryptApiTransport/ChangeDocumentDepartment", ReplyAction="http://tempuri.org/ITranscryptApiTransport/ChangeDocumentDepartmentResponse")]
-        DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean ChangeDocumentDepartment(System.Guid token, System.Guid documentId, System.Guid departmentId);
+        DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean ChangeDocumentDepartment(System.Guid token, System.Guid documentId, System.Nullable<System.Guid> departmentId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITranscryptApiTransport/DeleteDocument", ReplyAction="http://tempuri.org/ITranscryptApiTransport/DeleteDocumentResponse")]
+        DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean DeleteDocument(System.Guid token, System.Guid documentId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITranscryptApiTransport/RestoreDocument", ReplyAction="http://tempuri.org/ITranscryptApiTransport/RestoreDocumentResponse")]
+        DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean RestoreDocument(System.Guid token, System.Guid documentId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -5650,8 +6532,32 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
             return base.Channel.SendDocuments(token, documents, receiverId);
         }
         
+        public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfguid SaveDraftGroup(System.Guid token, DemoApi.TranscryptApi.TranscryptApiService.DocumentForSend[] documents, System.Nullable<System.Guid> draftGroupId, string receiverId) {
+            return base.Channel.SaveDraftGroup(token, documents, draftGroupId, receiverId);
+        }
+        
+        public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean DeleteDraftGroup(System.Guid token, System.Guid draftGroupId) {
+            return base.Channel.DeleteDraftGroup(token, draftGroupId);
+        }
+        
+        public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfguid SendDraftGroup(System.Guid token, System.Guid draftGroupId) {
+            return base.Channel.SendDraftGroup(token, draftGroupId);
+        }
+        
+        public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfDraftYNsim8dq GetDarft(System.Guid token, System.Guid draftId) {
+            return base.Channel.GetDarft(token, draftId);
+        }
+        
+        public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfDraftsGroupYNsim8dq GetDarftsGroup(System.Guid token, System.Guid draftGroupId) {
+            return base.Channel.GetDarftsGroup(token, draftGroupId);
+        }
+        
         public DemoApi.TranscryptApi.TranscryptApiService.PagedOperationResultOfArrayOfDocumentsGroupYNsim8dq GetDocumentsGroups(System.Guid token, DemoApi.TranscryptApi.TranscryptApiService.Document.Filter filter) {
             return base.Channel.GetDocumentsGroups(token, filter);
+        }
+        
+        public DemoApi.TranscryptApi.TranscryptApiService.PagedOperationResultOfArrayOfDraftsGroupYNsim8dq GetDraftsGroups(System.Guid token, DemoApi.TranscryptApi.TranscryptApiService.Draft.Filter filter) {
+            return base.Channel.GetDraftsGroups(token, filter);
         }
         
         public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfDocumentYNsim8dq GetDocument(System.Guid token, System.Guid documentId) {
@@ -5682,8 +6588,8 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
             return base.Channel.GenerateCorrectionNotice(token, documentId, description);
         }
         
-        public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfResponseForSendYNsim8dq GenerateAcceptanceNotice(System.Guid token, System.Guid documentId) {
-            return base.Channel.GenerateAcceptanceNotice(token, documentId);
+        public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfResponseForSendYNsim8dq GenerateAcceptanceNotice(System.Guid token, System.Guid documentId, DemoApi.TranscryptApi.TranscryptApiService.ProcurationInfo procurationInfo) {
+            return base.Channel.GenerateAcceptanceNotice(token, documentId, procurationInfo);
         }
         
         public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean CanCreateReceiveResult(System.Guid token, System.Guid documentId) {
@@ -5742,8 +6648,16 @@ namespace DemoApi.TranscryptApi.TranscryptApiService {
             return base.Channel.GetDocflowMemberIdRequest(token, id);
         }
         
-        public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean ChangeDocumentDepartment(System.Guid token, System.Guid documentId, System.Guid departmentId) {
+        public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean ChangeDocumentDepartment(System.Guid token, System.Guid documentId, System.Nullable<System.Guid> departmentId) {
             return base.Channel.ChangeDocumentDepartment(token, documentId, departmentId);
+        }
+        
+        public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean DeleteDocument(System.Guid token, System.Guid documentId) {
+            return base.Channel.DeleteDocument(token, documentId);
+        }
+        
+        public DemoApi.TranscryptApi.TranscryptApiService.OperationResultOfboolean RestoreDocument(System.Guid token, System.Guid documentId) {
+            return base.Channel.RestoreDocument(token, documentId);
         }
     }
     

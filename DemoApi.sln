@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApi", "C:\Users\gasfar-m\Documents\Visual Studio 2013\Projects\DemoApi\DemoApi\DemoApi.csproj", "{4A93D14C-F2D2-4DC6-9C21-E7C397B31E74}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApi.TranscryptApi", "C:\Users\gasfar-m\Documents\Visual Studio 2013\Projects\DemoApi\DemoApi.TranscryptApi\DemoApi.TranscryptApi.csproj", "{25B6D49F-9029-4C00-8B99-3AF4BA613F58}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{7CCA4A1C-F3D0-4C26-9973-1A1D582369D2}"
 	ProjectSection(SolutionItems) = preProject
 		lib\CAPI.dll = lib\CAPI.dll
@@ -16,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{7CCA4A1C-F3D
 		lib\Taxnet.Xml.net35.dll = lib\Taxnet.Xml.net35.dll
 		lib\Texnet.Logger.dll = lib\Texnet.Logger.dll
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApi", "DemoApi\DemoApi.csproj", "{4A93D14C-F2D2-4DC6-9C21-E7C397B31E74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApi.TranscryptApi", "DemoApi.TranscryptApi\DemoApi.TranscryptApi.csproj", "{25B6D49F-9029-4C00-8B99-3AF4BA613F58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

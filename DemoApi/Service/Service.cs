@@ -165,7 +165,7 @@ namespace DemoApi.Service
 		#endregion
 
 		#region Адресная книга
-		
+
 		/// <summary>
 		/// Отправка запроса на обмен документами
 		/// </summary>
@@ -173,7 +173,7 @@ namespace DemoApi.Service
 		/// <param name="requestReceiverName">Получатель запроса</param>
 		/// <param name="description">Комментарий к запросу</param>
 		/// <returns></returns>
-		public bool SendExchangeRequest(Guid tokenGuid, string requestReceiverName, string description)
+		public bool SendExchangeRequest(Guid tokenGuid, TranscryptApi.TranscryptApiService.Organization.Filter requestReceiverName, string description)
 		{
 			var requestReceiverId = _api.FindOrganizationsToAdd(tokenGuid, requestReceiverName);
 			var firstOrDefault = requestReceiverId.Result.FirstOrDefault();

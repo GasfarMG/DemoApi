@@ -26,6 +26,11 @@ namespace DemoApi.TranscryptApi
 			return r;
 		}
 
+		public OperationResultOfboolean BindUser(Guid token, string password)
+		{
+			throw new NotImplementedException();
+		}
+
 		public OperationResultOfArrayOfOrganizationYNsim8dq GetAllOrganizations(Guid token)
 		{
 			OperationResultOfArrayOfOrganizationYNsim8dq r;
@@ -56,6 +61,11 @@ namespace DemoApi.TranscryptApi
 			return r;
 		}
 
+		public OperationResultOfDraftsGroupYNsim8dq GetDarftsGroup(Guid token, Guid draftGroupId)
+		{
+			throw new NotImplementedException();
+		}
+
 		public PagedOperationResultOfArrayOfDocumentsGroupYNsim8dq GetDocumentsGroups(Guid token, Document.Filter filter)
 		{
 			PagedOperationResultOfArrayOfDocumentsGroupYNsim8dq r;
@@ -64,6 +74,11 @@ namespace DemoApi.TranscryptApi
 				r = transport.GetDocumentsGroups(token, filter);
 			}
 			return r;
+		}
+
+		public PagedOperationResultOfArrayOfDraftsGroupYNsim8dq GetDraftsGroups(Guid token, Draft.Filter filter)
+		{
+			throw new NotImplementedException();
 		}
 
 		public OperationResultOfDocumentYNsim8dq GetDocument(Guid token, Guid documentId)
@@ -117,9 +132,9 @@ namespace DemoApi.TranscryptApi
 			return r;
 		}
 
-		public OperationResultOfArrayOfOrganizationYNsim8dq FindOrganizationsToAdd(Guid token, string searchStr)
+		public PagedOperationResultOfArrayOfOrganizationYNsim8dq FindOrganizationsToAdd(Guid token, Organization.Filter searchStr)
 		{
-			OperationResultOfArrayOfOrganizationYNsim8dq r;
+			PagedOperationResultOfArrayOfOrganizationYNsim8dq r;
 			using (var profile = new TranscryptApiProfileClient())
 			{
 				r = profile.FindOrganizationsToAdd(token, searchStr);
@@ -165,6 +180,26 @@ namespace DemoApi.TranscryptApi
 				r = transport.SendDocuments(token, documents, receiverId);
 			}
 			return r;
+		}
+
+		public OperationResultOfguid SaveDraftGroup(Guid token, DocumentForSend[] documents, Guid? draftGroupId, string receiverId)
+		{
+			throw new NotImplementedException();
+		}
+
+		public OperationResultOfboolean DeleteDraftGroup(Guid token, Guid draftGroupId)
+		{
+			throw new NotImplementedException();
+		}
+
+		public OperationResultOfguid SendDraftGroup(Guid token, Guid draftGroupId)
+		{
+			throw new NotImplementedException();
+		}
+
+		public OperationResultOfDraftYNsim8dq GetDarft(Guid token, Guid draftId)
+		{
+			throw new NotImplementedException();
 		}
 
 		public OperationResultOfArrayOfCertificateInfoYNsim8dq GetCertificates(Guid token, bool activeOnly)
@@ -282,6 +317,11 @@ namespace DemoApi.TranscryptApi
 			throw new NotImplementedException();
 		}
 
+		public OperationResultOfboolean CheckPassword(Guid token, string password, OriginalRequester requester)
+		{
+			throw new NotImplementedException();
+		}
+
 		public OperationResultOfboolean CheckPassword(Guid token, string password)
 		{
 			throw new NotImplementedException();
@@ -387,6 +427,12 @@ namespace DemoApi.TranscryptApi
 			throw new NotImplementedException();
 		}
 
+		public OperationResultOfResponseForSendYNsim8dq GenerateAcceptanceNotice(Guid token, Guid documentId,
+			ProcurationInfo procurationInfo)
+		{
+			throw new NotImplementedException();
+		}
+
 		public OperationResultOfResponseForSendYNsim8dq GenerateAcceptanceNotice(Guid token, Guid documentId)
 		{
 			throw new NotImplementedException();
@@ -449,6 +495,21 @@ namespace DemoApi.TranscryptApi
 		}
 
 		public OperationResultOfDocflowMemberIdRequestYNsim8dq GetDocflowMemberIdRequest(Guid token, Guid id)
+		{
+			throw new NotImplementedException();
+		}
+
+		public OperationResultOfboolean ChangeDocumentDepartment(Guid token, Guid documentId, Guid? departmentId)
+		{
+			throw new NotImplementedException();
+		}
+
+		public OperationResultOfboolean DeleteDocument(Guid token, Guid documentId)
+		{
+			throw new NotImplementedException();
+		}
+
+		public OperationResultOfboolean RestoreDocument(Guid token, Guid documentId)
 		{
 			throw new NotImplementedException();
 		}

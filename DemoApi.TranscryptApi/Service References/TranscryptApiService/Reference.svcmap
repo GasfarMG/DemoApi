@@ -18,18 +18,18 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://demo.tcrypt.ru:8080/TranscryptApi.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TranscryptApi.disco" MetadataType="Disco" ID="fbd5d6a7-10e1-4830-a8fc-83e6f5bc11c0" SourceId="1" SourceUrl="http://demo.tcrypt.ru:8080/TranscryptApi.svc?disco" />
-    <MetadataFile FileName="TranscryptApi.xsd" MetadataType="Schema" ID="a2af322d-2362-4975-9ba8-ae5d6660311d" SourceId="1" SourceUrl="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd4" />
-    <MetadataFile FileName="TranscryptApi1.xsd" MetadataType="Schema" ID="554fe971-7f12-4493-9a84-9e587180c52b" SourceId="1" SourceUrl="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd3" />
-    <MetadataFile FileName="TranscryptApi2.xsd" MetadataType="Schema" ID="5e9dc0ab-4da3-4ab8-84ec-586ff73565bd" SourceId="1" SourceUrl="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd2" />
-    <MetadataFile FileName="TranscryptApi3.xsd" MetadataType="Schema" ID="3c6e5ad8-f8b1-475a-b5b8-6b55bddfed81" SourceId="1" SourceUrl="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd1" />
-    <MetadataFile FileName="TranscryptApi4.xsd" MetadataType="Schema" ID="b84bc74f-21ce-46f0-99ca-f0a153abf337" SourceId="1" SourceUrl="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd0" />
-    <MetadataFile FileName="TranscryptApi5.xsd" MetadataType="Schema" ID="8f5a6ac8-e67c-49d7-81d8-c5a3c6a8f6b3" SourceId="1" SourceUrl="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd5" />
-    <MetadataFile FileName="TranscryptApi.wsdl" MetadataType="Wsdl" ID="a3aa658b-a2ee-42d7-98e5-cea607f62916" SourceId="1" SourceUrl="http://demo.tcrypt.ru:8080/TranscryptApi.svc?wsdl" />
-    <MetadataFile FileName="TranscryptApi6.xsd" MetadataType="Schema" ID="2ce67dff-75a4-4876-9ca6-99ae6df5a853" SourceId="1" SourceUrl="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd6" />
+    <MetadataFile FileName="TranscryptApi7.xsd" MetadataType="Schema" ID="a90191db-ae18-434b-8a4c-82357bed0f98" SourceId="1" SourceUrl="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd0" />
+    <MetadataFile FileName="TranscryptApi71.xsd" MetadataType="Schema" ID="f36dfcaf-b3f4-4dc2-aead-cd14fd6bf790" SourceId="1" SourceUrl="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd1" />
+    <MetadataFile FileName="TranscryptApi72.xsd" MetadataType="Schema" ID="7640e3f6-c2b2-4d1a-b96a-aebc3264ca1d" SourceId="1" SourceUrl="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd2" />
+    <MetadataFile FileName="TranscryptApi73.xsd" MetadataType="Schema" ID="d8ed992e-cead-4471-9385-fc63af5422e9" SourceId="1" SourceUrl="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd3" />
+    <MetadataFile FileName="TranscryptApi74.xsd" MetadataType="Schema" ID="e9f157b0-692f-4a13-96ec-e9189ce4e2ff" SourceId="1" SourceUrl="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd4" />
+    <MetadataFile FileName="TranscryptApi75.xsd" MetadataType="Schema" ID="ffb85f67-30e5-4343-81ba-e41120db15a4" SourceId="1" SourceUrl="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd5" />
+    <MetadataFile FileName="TranscryptApi1.disco" MetadataType="Disco" ID="b23f8560-d352-4c88-967d-a7f0610baa68" SourceId="1" SourceUrl="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?disco" />
+    <MetadataFile FileName="TranscryptApi76.xsd" MetadataType="Schema" ID="8a51c341-ca55-49ae-868a-14338a2aff5c" SourceId="1" SourceUrl="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd6" />
+    <MetadataFile FileName="TranscryptApi1.wsdl" MetadataType="Wsdl" ID="5f2591d5-3fdc-4509-82f7-40108bec8a15" SourceId="1" SourceUrl="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

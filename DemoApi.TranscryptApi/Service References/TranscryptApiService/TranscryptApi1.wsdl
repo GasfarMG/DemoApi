@@ -2,13 +2,13 @@
 <wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TranscryptApi" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
-      <xsd:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd0" namespace="http://tempuri.org/" />
-      <xsd:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" />
-      <xsd:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
-      <xsd:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" />
-      <xsd:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-      <xsd:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.Security.Cryptography.X509Certificates" />
+      <xsd:import schemaLocation="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" />
+      <xsd:import schemaLocation="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+      <xsd:import schemaLocation="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" />
+      <xsd:import schemaLocation="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.Security.Cryptography.X509Certificates" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ITranscryptApiNotification_GetNotifications_InputMessage">
@@ -178,6 +178,12 @@
   </wsdl:message>
   <wsdl:message name="ITranscryptApiProfile_GetUserLogin_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetUserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_BindUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:BindUser" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiProfile_BindUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BindUserResponse" />
   </wsdl:message>
   <wsdl:message name="ITranscryptApiProfile_GetAllOrganizations_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllOrganizations" />
@@ -365,6 +371,36 @@
   <wsdl:message name="ITranscryptApiTransport_SendDocuments_ArgumentFaultFault_FaultMessage">
     <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q30:ArgumentFault" />
   </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_SaveDraftGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDraftGroup" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_SaveDraftGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDraftGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_DeleteDraftGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDraftGroup" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_DeleteDraftGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDraftGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_SendDraftGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendDraftGroup" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_SendDraftGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendDraftGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetDarft_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDarft" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetDarft_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDarftResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetDarftsGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDarftsGroup" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetDarftsGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDarftsGroupResponse" />
+  </wsdl:message>
   <wsdl:message name="ITranscryptApiTransport_GetDocumentsGroups_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDocumentsGroups" />
   </wsdl:message>
@@ -373,6 +409,12 @@
   </wsdl:message>
   <wsdl:message name="ITranscryptApiTransport_GetDocumentsGroups_ArgumentFaultFault_FaultMessage">
     <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" name="detail" element="q31:ArgumentFault" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetDraftsGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDraftsGroups" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_GetDraftsGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDraftsGroupsResponse" />
   </wsdl:message>
   <wsdl:message name="ITranscryptApiTransport_GetDocument_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDocument" />
@@ -550,6 +592,18 @@
   </wsdl:message>
   <wsdl:message name="ITranscryptApiTransport_ChangeDocumentDepartment_OutputMessage">
     <wsdl:part name="parameters" element="tns:ChangeDocumentDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_DeleteDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDocument" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_DeleteDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_RestoreDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:RestoreDocument" />
+  </wsdl:message>
+  <wsdl:message name="ITranscryptApiTransport_RestoreDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RestoreDocumentResponse" />
   </wsdl:message>
   <wsdl:message name="ITranscryptApiCertificate_GetSignatureCertificate_InputMessage">
     <wsdl:part name="parameters" element="tns:GetSignatureCertificate" />
@@ -909,6 +963,7 @@
             &lt;/summary&gt;
             &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
             &lt;param name="password"&gt;Пароль&lt;/param&gt;
+            &lt;param name="requester"&gt;Источник запроса&lt;/param&gt;
             &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
       <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/CheckPassword" message="tns:ITranscryptApiProfile_CheckPassword_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/CheckPasswordResponse" message="tns:ITranscryptApiProfile_CheckPassword_OutputMessage" />
@@ -922,6 +977,16 @@
             &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
       <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/GetUserLogin" message="tns:ITranscryptApiProfile_GetUserLogin_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/GetUserLoginResponse" message="tns:ITranscryptApiProfile_GetUserLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BindUser">
+      <wsdl:documentation>&lt;summary&gt;
+            Привязать сотрудника к пользователю
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="password"&gt;Пароль&lt;/param&gt;
+            &lt;returns&gt;Результат операции&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/BindUser" message="tns:ITranscryptApiProfile_BindUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileEmployee/BindUserResponse" message="tns:ITranscryptApiProfile_BindUser_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAllOrganizations">
       <wsdl:documentation>&lt;summary&gt;
@@ -1017,7 +1082,7 @@
             Не возвращает свою организацию и те которые находятся в активных адресной книги
             &lt;/summary&gt;
             &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
-            &lt;param name="searchStr"&gt;Строка для поиска&lt;/param&gt;
+            &lt;param name="filter"&gt;Фильтр&lt;/param&gt;
             &lt;returns&gt;Список организаций с подходящим именем, идентификатором или ИНН&lt;/returns&gt;</wsdl:documentation>
       <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/FindOrganizationsToAdd" message="tns:ITranscryptApiProfile_FindOrganizationsToAdd_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiProfileOrganization/FindOrganizationsToAddResponse" message="tns:ITranscryptApiProfile_FindOrganizationsToAdd_OutputMessage" />
@@ -1171,6 +1236,58 @@
       <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/SendDocumentsResponse" message="tns:ITranscryptApiTransport_SendDocuments_OutputMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiTransport/SendDocumentsArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiTransport_SendDocuments_ArgumentFaultFault_FaultMessage" />
     </wsdl:operation>
+    <wsdl:operation name="SaveDraftGroup">
+      <wsdl:documentation>&lt;summary&gt;
+            Сохранить черновик
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="documents"&gt;Список документов для отправки одной группой&lt;/param&gt;
+            &lt;param name="draftGroupId"&gt;Идентификатор черновика&lt;/param&gt;
+            &lt;param name="receiverId"&gt;Идентификатор участника документооборота получателя&lt;/param&gt;
+            &lt;returns&gt;Идентификатор сформированной группы документов в черновиках&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/SaveDraftGroup" message="tns:ITranscryptApiTransport_SaveDraftGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/SaveDraftGroupResponse" message="tns:ITranscryptApiTransport_SaveDraftGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDraftGroup">
+      <wsdl:documentation>&lt;summary&gt;
+            Удалить черновик
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="draftGroupId"&gt;Идентификатор черновика&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/DeleteDraftGroup" message="tns:ITranscryptApiTransport_DeleteDraftGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/DeleteDraftGroupResponse" message="tns:ITranscryptApiTransport_DeleteDraftGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendDraftGroup">
+      <wsdl:documentation>&lt;summary&gt;
+            Отправить черновик
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="draftGroupId"&gt;Идентификатор черновика&lt;/param&gt;
+            &lt;returns&gt;Идентификатор группы сформированной после отправки&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/SendDraftGroup" message="tns:ITranscryptApiTransport_SendDraftGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/SendDraftGroupResponse" message="tns:ITranscryptApiTransport_SendDraftGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDarft">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить черновик по идентификатору
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="draftId"&gt;Идентификатор черновика&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDarft" message="tns:ITranscryptApiTransport_GetDarft_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDarftResponse" message="tns:ITranscryptApiTransport_GetDarft_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDarftsGroup">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить группу черновиков по идентификатору
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="draftGroupId"&gt;Идентификатор группы&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDarftsGroup" message="tns:ITranscryptApiTransport_GetDarftsGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDarftsGroupResponse" message="tns:ITranscryptApiTransport_GetDarftsGroup_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetDocumentsGroups">
       <wsdl:documentation>&lt;summary&gt;
             Получить список групп документов
@@ -1181,6 +1298,16 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDocumentsGroups" message="tns:ITranscryptApiTransport_GetDocumentsGroups_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDocumentsGroupsResponse" message="tns:ITranscryptApiTransport_GetDocumentsGroups_OutputMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDocumentsGroupsArgumentFaultFault" name="ArgumentFaultFault" message="tns:ITranscryptApiTransport_GetDocumentsGroups_ArgumentFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDraftsGroups">
+      <wsdl:documentation>&lt;summary&gt;
+            Получить список групп черновиков
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="filter"&gt;Фильтр&lt;/param&gt;
+            &lt;returns&gt;Список групп черновиков&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDraftsGroups" message="tns:ITranscryptApiTransport_GetDraftsGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GetDraftsGroupsResponse" message="tns:ITranscryptApiTransport_GetDraftsGroups_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetDocument">
       <wsdl:documentation>&lt;summary&gt;
@@ -1277,6 +1404,7 @@
             &lt;/summary&gt;
             &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
             &lt;param name="documentId"&gt;Идентификатор полученного документа&lt;/param&gt;
+            &lt;param name="procurationInfo"&gt;Информация о доверенности&lt;/param&gt;
             &lt;returns&gt;Уведомление о подписи получателем&lt;/returns&gt;</wsdl:documentation>
       <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GenerateAcceptanceNotice" message="tns:ITranscryptApiTransport_GenerateAcceptanceNotice_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/GenerateAcceptanceNoticeResponse" message="tns:ITranscryptApiTransport_GenerateAcceptanceNotice_OutputMessage" />
@@ -1440,6 +1568,26 @@
             &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
       <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/ChangeDocumentDepartment" message="tns:ITranscryptApiTransport_ChangeDocumentDepartment_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/ChangeDocumentDepartmentResponse" message="tns:ITranscryptApiTransport_ChangeDocumentDepartment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocument">
+      <wsdl:documentation>&lt;summary&gt;
+            Удалить документ
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="documentId"&gt;Идентификатор документа&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/DeleteDocument" message="tns:ITranscryptApiTransport_DeleteDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/DeleteDocumentResponse" message="tns:ITranscryptApiTransport_DeleteDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RestoreDocument">
+      <wsdl:documentation>&lt;summary&gt;
+            Восстановление документа
+            &lt;/summary&gt;
+            &lt;param name="token"&gt;Токен авторизации&lt;/param&gt;
+            &lt;param name="documentId"&gt;Идентификатор документа&lt;/param&gt;
+            &lt;returns&gt;&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/ITranscryptApiTransport/RestoreDocument" message="tns:ITranscryptApiTransport_RestoreDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITranscryptApiTransport/RestoreDocumentResponse" message="tns:ITranscryptApiTransport_RestoreDocument_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="ITranscryptApiCertificate">
@@ -1852,6 +2000,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="BindUser">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileEmployee/BindUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetAllOrganizations">
       <soap:operation soapAction="http://tempuri.org/ITranscryptApiProfileOrganization/GetAllOrganizations" style="document" />
       <wsdl:input>
@@ -2107,6 +2264,51 @@
         <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
+    <wsdl:operation name="SaveDraftGroup">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/SaveDraftGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDraftGroup">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/DeleteDraftGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendDraftGroup">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/SendDraftGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDarft">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetDarft" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDarftsGroup">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetDarftsGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetDocumentsGroups">
       <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetDocumentsGroups" style="document" />
       <wsdl:input>
@@ -2118,6 +2320,15 @@
       <wsdl:fault name="ArgumentFaultFault">
         <soap:fault use="literal" name="ArgumentFaultFault" namespace="" />
       </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDraftsGroups">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetDraftsGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetDocument">
       <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/GetDocument" style="document" />
@@ -2365,6 +2576,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DeleteDocument">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/DeleteDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RestoreDocument">
+      <soap:operation soapAction="http://tempuri.org/ITranscryptApiTransport/RestoreDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="CertificateApi" type="tns:ITranscryptApiCertificate">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -2536,31 +2765,31 @@
   </wsdl:binding>
   <wsdl:service name="TranscryptApi">
     <wsdl:port name="NotificationApi" binding="tns:NotificationApi">
-      <soap:address location="http://demo.tcrypt.ru:8080/TranscryptApi.svc" />
+      <soap:address location="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" />
     </wsdl:port>
     <wsdl:port name="AddressBookApi" binding="tns:AddressBookApi">
-      <soap:address location="http://demo.tcrypt.ru:8080/TranscryptApi.svc" />
+      <soap:address location="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" />
     </wsdl:port>
     <wsdl:port name="AuthenticateApi" binding="tns:AuthenticateApi">
-      <soap:address location="http://demo.tcrypt.ru:8080/TranscryptApi.svc" />
+      <soap:address location="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" />
     </wsdl:port>
     <wsdl:port name="ProfileApi" binding="tns:ProfileApi">
-      <soap:address location="http://demo.tcrypt.ru:8080/TranscryptApi.svc" />
+      <soap:address location="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" />
     </wsdl:port>
     <wsdl:port name="TransportApi" binding="tns:TransportApi">
-      <soap:address location="http://demo.tcrypt.ru:8080/TranscryptApi.svc" />
+      <soap:address location="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" />
     </wsdl:port>
     <wsdl:port name="CertificateApi" binding="tns:CertificateApi">
-      <soap:address location="http://demo.tcrypt.ru:8080/TranscryptApi.svc" />
+      <soap:address location="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" />
     </wsdl:port>
     <wsdl:port name="DictionaryApi" binding="tns:DictionaryApi">
-      <soap:address location="http://demo.tcrypt.ru:8080/TranscryptApi.svc" />
+      <soap:address location="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" />
     </wsdl:port>
     <wsdl:port name="PrivateApi" binding="tns:PrivateApi">
-      <soap:address location="http://demo.tcrypt.ru:8080/TranscryptApi.svc" />
+      <soap:address location="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" />
     </wsdl:port>
     <wsdl:port name="TranscryptIdService" binding="tns:TranscryptIdService">
-      <soap:address location="http://demo.tcrypt.ru:8080/TranscryptApi.svc" />
+      <soap:address location="http://192.168.130.149/tcapi-rc/TranscryptApi.svc" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

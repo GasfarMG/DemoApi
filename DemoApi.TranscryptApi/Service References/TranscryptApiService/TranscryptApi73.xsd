@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
-  <xs:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" />
-  <xs:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-  <xs:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-  <xs:import schemaLocation="http://demo.tcrypt.ru:8080/TranscryptApi.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.Security.Cryptography.X509Certificates" />
+  <xs:import schemaLocation="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+  <xs:import schemaLocation="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Faults" />
+  <xs:import schemaLocation="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://192.168.130.149/tcapi-rc/TranscryptApi.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.Security.Cryptography.X509Certificates" />
   <xs:complexType name="OperationResultOfArrayOfNotificationYNsim8dq">
     <xs:annotation>
       <xs:appinfo>
@@ -247,6 +247,23 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="OperationResultOfOrganizationYNsim8dq" nillable="true" type="tns:OperationResultOfOrganizationYNsim8dq" />
+  <xs:complexType name="PagedOperationResultOfArrayOfOrganizationYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PagedOperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfOrganization" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultOfArrayOfOrganizationYNsim8dq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PagedOperationResultOfArrayOfOrganizationYNsim8dq" nillable="true" type="tns:PagedOperationResultOfArrayOfOrganizationYNsim8dq" />
   <xs:complexType name="OperationResultOfbase64Binary">
     <xs:annotation>
       <xs:appinfo>
@@ -315,6 +332,40 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="OperationResultOfDepartmentYNsim8dq" nillable="true" type="tns:OperationResultOfDepartmentYNsim8dq" />
+  <xs:complexType name="OperationResultOfDraftYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Draft" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q15:Draft" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfDraftYNsim8dq" nillable="true" type="tns:OperationResultOfDraftYNsim8dq" />
+  <xs:complexType name="OperationResultOfDraftsGroupYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DraftsGroup" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q16:DraftsGroup" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfDraftsGroupYNsim8dq" nillable="true" type="tns:OperationResultOfDraftsGroupYNsim8dq" />
   <xs:complexType name="PagedOperationResultOfArrayOfDocumentsGroupYNsim8dq">
     <xs:annotation>
       <xs:appinfo>
@@ -343,12 +394,46 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:OperationResultBase">
         <xs:sequence>
-          <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q15:ArrayOfDocumentsGroup" />
+          <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q17:ArrayOfDocumentsGroup" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="OperationResultOfArrayOfDocumentsGroupYNsim8dq" nillable="true" type="tns:OperationResultOfArrayOfDocumentsGroupYNsim8dq" />
+  <xs:complexType name="PagedOperationResultOfArrayOfDraftsGroupYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PagedOperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfDraftsGroup" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultOfArrayOfDraftsGroupYNsim8dq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PagedOperationResultOfArrayOfDraftsGroupYNsim8dq" nillable="true" type="tns:PagedOperationResultOfArrayOfDraftsGroupYNsim8dq" />
+  <xs:complexType name="OperationResultOfArrayOfDraftsGroupYNsim8dq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfDraftsGroup" Namespace="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q18:ArrayOfDraftsGroup" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfDraftsGroupYNsim8dq" nillable="true" type="tns:OperationResultOfArrayOfDraftsGroupYNsim8dq" />
   <xs:complexType name="OperationResultOfDocumentYNsim8dq">
     <xs:annotation>
       <xs:appinfo>
@@ -360,7 +445,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:OperationResultBase">
         <xs:sequence>
-          <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q16:Document" />
+          <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q19:Document" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -377,7 +462,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:OperationResultBase">
         <xs:sequence>
-          <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q17:ArrayOfTransaction" />
+          <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q20:ArrayOfTransaction" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -394,7 +479,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:OperationResultBase">
         <xs:sequence>
-          <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q18:ResponseForSend" />
+          <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q21:ResponseForSend" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -411,7 +496,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:OperationResultBase">
         <xs:sequence>
-          <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Result" nillable="true" type="q19:ArrayOfint" />
+          <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Result" nillable="true" type="q22:ArrayOfint" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -428,7 +513,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:OperationResultBase">
         <xs:sequence>
-          <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q20:TransactionFile" />
+          <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q23:TransactionFile" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -445,7 +530,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:OperationResultBase">
         <xs:sequence>
-          <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Result" nillable="true" type="q21:ArrayOfguid" />
+          <xs:element xmlns:q24="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Result" nillable="true" type="q24:ArrayOfguid" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -462,7 +547,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:OperationResultBase">
         <xs:sequence>
-          <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q22:ArrayOfDocument" />
+          <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q25:ArrayOfDocument" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -479,7 +564,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:OperationResultBase">
         <xs:sequence>
-          <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q23:ArrayOfInvoiceInfo" />
+          <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q26:ArrayOfInvoiceInfo" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -496,7 +581,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:OperationResultBase">
         <xs:sequence>
-          <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q24:InvoiceInfo" />
+          <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q27:InvoiceInfo" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -513,7 +598,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:OperationResultBase">
         <xs:sequence>
-          <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q25:DocflowMemberIdRequest" />
+          <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q28:DocflowMemberIdRequest" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -530,7 +615,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:OperationResultBase">
         <xs:sequence>
-          <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/System.Security.Cryptography.X509Certificates" minOccurs="0" name="Result" nillable="true" type="q26:X509Certificate2" />
+          <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/System.Security.Cryptography.X509Certificates" minOccurs="0" name="Result" nillable="true" type="q29:X509Certificate2" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -547,7 +632,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:OperationResultBase">
         <xs:sequence>
-          <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q27:ArrayOfRegion" />
+          <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q30:ArrayOfRegion" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -564,7 +649,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:OperationResultBase">
         <xs:sequence>
-          <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q28:ArrayOfCountry" />
+          <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q31:ArrayOfCountry" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -581,7 +666,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:OperationResultBase">
         <xs:sequence>
-          <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q29:Country" />
+          <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q32:Country" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -598,7 +683,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:OperationResultBase">
         <xs:sequence>
-          <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q30:Region" />
+          <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" nillable="true" type="q33:Region" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -615,7 +700,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:OperationResultBase">
         <xs:sequence>
-          <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" type="q31:ConfirmState" />
+          <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Taxnet.Transcrypt.API.Domain" minOccurs="0" name="Result" type="q34:ConfirmState" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
